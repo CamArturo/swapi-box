@@ -25,7 +25,8 @@ class App extends Component {
         date: film.release_date
       };
     });
-    const randomInt = getRandomInt(0, 6);
+    const randomInt = getRandomInt(0, 7);
+    console.log('number', randomInt);
     filmsInfo = filmsInfo.slice(randomInt, randomInt + 1);
     this.setState({filmsInfo});
   };
