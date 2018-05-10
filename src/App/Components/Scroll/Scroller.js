@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import './Scroller.css';
+import PropTypes from 'prop-types'
 
 class Scroller extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
 
     };
@@ -17,19 +18,21 @@ class Scroller extends Component {
         <section className="star-wars">
           <div className="crawl">
             <div className="title">
-              <p>Episode IV</p>
-              <h1>A New Hope</h1>
+              <h1>{this.props.filmsInfo.title}</h1>
+              <p>{this.props.filmsInfo.date}</p>
             </div>
 
-            <p>It is a period of civil war. Rebel spaceships, striking from a
-              hidden base, have won their first victory against the evil Galactic
-              Empire.</p>
+            <p>{this.props.filmsInfo.scroll}</p>
           </div>
         </section>
       </div>
     );
   }
+}
 
+Scroller.propTypes = {
+  filmsInfo: PropTypes.object.isRequired
 };
+
 
 export default Scroller;
