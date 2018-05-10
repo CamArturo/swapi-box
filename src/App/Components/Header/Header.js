@@ -8,15 +8,13 @@ const Header = () => {
     <div>
       <header className="App-header">
         {/*<h1 className="title-fadein">SWAPIbox</h1>*/}
-        <img src={logo} className="fadein logo" alt="SWAPIbox" />
+        <img src={logo} className="fadein logo" alt="SWAPIbox"/>
       </header>
       <hr/>
     </div>
   );
 };
 
-Header.propTypes = {
-    
-};
+Header.propTypes = {};
 
 export default Header;
