@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
-import logo from './swapi-box-logo.png';
-
+import Header from './Components/Header/Header';
+import Navigation from './Components/Navigation/Navigation';
 
 class App extends Component {
-  constructor () {
+  constructor() {
     super();
     this.state = {};
   }
@@ -12,10 +12,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          {/*<h1 className="title-fadein">SWAPIbox</h1>*/}
-          <img src={logo} className="title-fadein logo" alt="SWAPIbox" />
-        </header>
+        <Header/>
+        <Navigation/>
       </div>
     );
   }
