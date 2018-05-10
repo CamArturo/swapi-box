@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="400e2b15-83b1-4334-ad8c-fcbf46cbbed9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Components/Scroll/Scroller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/Scroll/Scroller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/card.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/card.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/helper.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+            <state relative-caret-position="207">
+              <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
                 <element signature="e#496#533#0" />
@@ -31,57 +36,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Navigation.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/Components/StatelessComponents/Navigation/Navigation.js">
+      <file leaf-file-name="Card.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="272">
+              <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Navigation.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/Components/StatelessComponents/Navigation/Navigation.scss">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            <state relative-caret-position="51">
+              <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="helper.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/helper.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Scroller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/Components/Scroll/Scroller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Scroller.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/Components/Scroll/Scroller.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Scroller.test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/Components/Scroll/Scroller.test.js">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -124,7 +100,6 @@
         <option value="$PROJECT_DIR$/src/Audio/AudioPlayer.js" />
         <option value="$PROJECT_DIR$/src/App/Audio/AudioPlayer.js" />
         <option value="$PROJECT_DIR$/src/App/Components/CardContainer.js" />
-        <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/index.js" />
         <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/cardContainer.test.js" />
         <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/Card/index.js" />
         <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/Card/card.test.js" />
@@ -139,9 +114,11 @@
         <option value="$PROJECT_DIR$/src/App/Components/Scroll/scroll.scss" />
         <option value="$PROJECT_DIR$/src/App/Components/Scroll/Scroll.js" />
         <option value="$PROJECT_DIR$/src/App/Components/Scroll/Scroller.scss" />
-        <option value="$PROJECT_DIR$/src/App/helper.js" />
         <option value="$PROJECT_DIR$/src/App/Components/Scroll/Scroller.js" />
         <option value="$PROJECT_DIR$/src/App/App.js" />
+        <option value="$PROJECT_DIR$/src/App/helper.js" />
+        <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/index.js" />
+        <option value="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.js" />
       </list>
     </option>
   </component>
@@ -225,7 +202,25 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="App" type="462c0819:PsiDirectoryNode" />
               <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="StatefullComponents" type="462c0819:PsiDirectoryNode" />
+              <item name="Card" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="swapi-box" type="b2602c69:ProjectViewProjectNode" />
+              <item name="swapi-box" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
               <item name="StatelessComponents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="swapi-box" type="b2602c69:ProjectViewProjectNode" />
+              <item name="swapi-box" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="StatelessComponents" type="462c0819:PsiDirectoryNode" />
+              <item name="CardContainer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="swapi-box" type="b2602c69:ProjectViewProjectNode" />
@@ -302,7 +297,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29494000" />
+    <option name="totallyTimeSpent" value="30257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -340,14 +335,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/App/Components/Header.js" />
-    <entry file="file://$PROJECT_DIR$/src/App/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="273" column="2" lean-forward="true" selection-start-line="273" selection-start-column="2" selection-end-line="273" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Audio/AudioPlayer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -362,7 +349,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/card.test.js">
+    <entry file="file://$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
@@ -417,7 +404,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/card.scss">
+    <entry file="file://$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
@@ -459,9 +446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -588,7 +572,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/card.test.js">
+    <entry file="file://$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
@@ -602,13 +586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -626,9 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Components/Scroll/Scroller.test.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Components/StatelessComponents/Header/Header.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
@@ -643,7 +617,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/card.scss">
+    <entry file="file://$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
@@ -657,13 +631,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Components/StatelessComponents/Navigation/Navigation.js">
+    <entry file="file://$PROJECT_DIR$/src/App/Components/Scroll/Scroller.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="453">
+          <caret line="61" selection-start-line="61" selection-end-line="85" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Components/Scroll/Scroller.test.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -674,17 +655,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/helper.js">
+    <entry file="file://$PROJECT_DIR$/src/App/Components/StatelessComponents/Navigation/Navigation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Components/Scroll/Scroller.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="2" />
+        <state relative-caret-position="34">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -697,11 +671,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+        <state relative-caret-position="207">
+          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <element signature="e#496#533#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
