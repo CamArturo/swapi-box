@@ -1,31 +1,33 @@
 import React, {Component} from 'react';
 import './App.css';
 import AudioPlayer from './Audio/AudioPlayer';
-import Header from './Components/Header/Header';
-import Navigation from './Components/Navigation/Navigation';
+import Scroller from './Components/Scroll/Scroller';
+import Header from './Components/StatelessComponents/Header/Header';
+import Navigation from './Components/StatelessComponents/Navigation/Navigation';
+import {getRandomInt} from './helper';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      // loading: false,
-      // data: {
-      //
-      // }
+      loading: false,
+      filmsInfo: []
     };
   }
 
-  fetchFilms = async (url) => {
+  fetchScrollInfo = async (url) => {
     const response = await fetch(url);
     const data = await response.json();
-    // const filmKeys = Object.keys(data['results']);
-    const array = data.results.map(film => {
+    let filmsInfo = data.results.map(film => {
       return {
+        scroll: film.opening_crawl,
         title: film.title,
-        scroll: film.opening_crawl
+        date: film.release_date
       };
     });
-    // console.log(array);
+    const randomInt = getRandomInt(0, 6);
+    filmsInfo = filmsInfo.slice(randomInt, randomInt + 1);
+    this.setState({filmsInfo});
   };
 
   async componentDidMount() {
@@ -33,13 +35,7 @@ class App extends Component {
     const url = 'https://swapi.co/api/';
     const response = await fetch(url);
     const data = await response.json();
-    const films = await this.fetchFilms(data['films']);
-
-
-    // https://swapi.co/api/films
-    // results.map
-    // get title
-    // get opening_crawl
+    const filmsInfo = await this.fetchScrollInfo(data['films']);
   }
 
   render() {
@@ -47,6 +43,9 @@ class App extends Component {
       <div className="App">
         <AudioPlayer/>
         <Header/>
+        <Scroller
+          filmsInfo={this.state.filmsInfo}
+        />
         <Navigation/>
       </div>
     );

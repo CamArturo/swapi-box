@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../swapi-box-logo.png';
+import logo from '../../../swapi-box-logo.png';
 import './Header.css';
 import PropTypes from 'prop-types';
 
