@@ -1,0 +1,60 @@
+.App-header {
+  height: 97px;
+  margin: 2rem 0 2rem 0;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly; }
+  .App-header img {
+    max-width: 810px; }
+
+.fadein {
+  animation: fadein 5s;
+  -moz-animation: fadein 5s;
+  /* Firefox */
+  -webkit-animation: fadein 5s;
+  /* Safari and Chrome */
+  -o-animation: fadein 5s;
+  /* Opera */ }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .App-header {
+    margin: 0; }
+    .App-header img {
+      width: 90%;
+      margin: 1rem auto;
+      display: block; } }
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .App-header {
+    height: 83px; } }
+/* Custom, iPhone Retina */
+
+/*# sourceMappingURL=Header.css.map */
