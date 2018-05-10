@@ -20,9 +20,12 @@ class App extends Component {
     const data = await response.json();
     // const filmKeys = Object.keys(data['results']);
     const array = data.results.map(film => {
-      return film.title;
+      return {
+        title: film.title,
+        scroll: film.opening_crawl
+      };
     });
-    console.log(array)
+    // console.log(array);
   };
 
   async componentDidMount() {
@@ -30,7 +33,6 @@ class App extends Component {
     const url = 'https://swapi.co/api/';
     const response = await fetch(url);
     const data = await response.json();
-    // console.log(data['films'])
     const films = await this.fetchFilms(data['films']);
 
 
