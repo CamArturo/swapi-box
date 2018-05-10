@@ -11,31 +11,37 @@ class App extends Component {
     super(props);
     this.state = {
       loading: false,
-      filmsInfo: []
+      filmsInfo: {}
     };
   }
 
-  fetchScrollInfo = async (url) => {
-    const response = await fetch(url);
-    const data = await response.json();
-    let filmsInfo = data.results.map(film => {
-      return {
-        scroll: film.opening_crawl,
-        title: film.title,
-        date: film.release_date
-      };
-    });
-    const randomInt = getRandomInt(0, 6);
-    filmsInfo = filmsInfo.slice(randomInt, randomInt + 1);
-    this.setState({filmsInfo});
-  };
+  // fetchScrollInfo = async (url) => {
+  //   const response = await fetch(url);
+  //   const data = await response.json();
+  //   let filmsInfo = data.results.map(film => {
+  //     return {
+  //       scroll: film.opening_crawl,
+  //       title: film.title,
+  //       date: film.release_date
+  //     };
+  //   });
+  //   const randomInt = getRandomInt(0, 6);
+  //   filmsInfo = filmsInfo[randomInt];
+  //   // this.setState({filmsInfo});
+  // };
 
   async componentDidMount() {
-    // this.setState({loading:true});
-    const url = 'https://swapi.co/api/';
+    this.setState({loading:true});
+    const randomNum = getRandomInt(0, 6);
+    const url = `https://swapi.co/api/films/${randomNum}`;
     const response = await fetch(url);
     const data = await response.json();
-    const filmsInfo = await this.fetchScrollInfo(data['films']);
+    const filmsInfo = {
+      title: data.title,
+      date: data.release_date,
+      scroll: data.opening_crawl
+    };
+    this.setState({filmsInfo});
   }
 
   render() {
@@ -43,9 +49,12 @@ class App extends Component {
       <div className="App">
         <AudioPlayer/>
         <Header/>
-        <Scroller
-          filmsInfo={this.state.filmsInfo}
-        />
+        {
+          this.state.filmsInfo &&
+          <Scroller
+            filmsInfo={this.state.filmsInfo}
+          />
+        }
         <Navigation/>
       </div>
     );
