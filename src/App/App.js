@@ -6,7 +6,8 @@ import Header from './Components/StatelessComponents/Header/Header';
 import Navigation from './Components/StatelessComponents/Navigation/Navigation';
 // import {fetchPeopleData} from './APICalls';
 import {getRandomInt} from './helper';
-import CardContainer from "./Components/StatelessComponents/CardContainer/CardContainer";
+import CardContainer
+  from "./Components/StatelessComponents/CardContainer/CardContainer";
 
 class App extends Component {
   constructor(props) {
@@ -44,16 +45,18 @@ class App extends Component {
     return Promise.all(results);
   };
 
-  fetchPeople = async (category) => {
-    console.log('fetch people fired');
+  // fetch people on scroll,
+  // fetch Category
+
+
+  fetchCategory = async (category) => {
     const url = `https://swapi.co/api/${category}/`;
     const response = await fetch(url);
-    const characters = await response.json();
-    const people = await this.fetchPerson(characters.results);
+    const categoryUrls = await response.json();
+    // take fetchPerson out -
+    //const people = await this.fetchPerson(characters.results);
     this.setState({
-      people,
-      data: people,
-      loading: false
+      [`${category}Urls`]: categoryUrls.results
     });
   };
 
@@ -63,10 +66,16 @@ class App extends Component {
   // Population of Homeworld
   // A button to “Favorite” the person
 
-  updateCards = (category) => {
+  updateCards = async (category) => {
     switch (category) {
       case 'people':
-        this.fetchPeople(category);
+        // rename FetchCategor
+        const people = await this.fetchPerson(this.state.peopleUrls);
+        this.setState({
+          // data: people,
+          people,
+          loading: false
+        });
         break;
       case 'planets':
         console.log('planets');
@@ -90,13 +99,16 @@ class App extends Component {
       scroll: data.opening_crawl
     };
     this.setState({filmsInfo});
+    await this.fetchCategory('people');
+    await this.fetchCategory('planets');
+    await this.fetchCategory('vehicles');
   }
 
   render() {
     return (
       <div className="App">
         <AudioPlayer/>
-        <Header />
+        <Header/>
         {
           this.state.filmsInfo &&
           this.state.loading &&
@@ -105,7 +117,10 @@ class App extends Component {
           />
         }
         <CardContainer
-          cards={this.state.data}
+          category={this.state.currentCategory}
+          people={this.state.people}
+          planets={this.state.planets}
+          vehicles={this.state.vehicles}
         />
         <Navigation
           selectCategory={this.updateCards}
