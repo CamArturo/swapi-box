@@ -20,23 +20,26 @@ class App extends Component {
     };
   }
 
-  // fetchScrollInfo = async (url) => {
-  //   const response = await fetch(url);
-  //   const data = await response.json();
-  //   let filmsInfo = data.results.map(film => {
-  //     return {
-  //       scroll: film.opening_crawl,
-  //       title: film.title,
-  //       date: film.release_date
-  //     };
-  //   });
-  //   const randomInt = getRandomInt(0, 6);
-  //   filmsInfo = filmsInfo[randomInt];
-  //   // this.setState({filmsInfo});
-  // };
+  fetchPeople = async (category) => {
+    const url = `https://swapi.co/api/${category}/`;
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data)
+  };
 
   updateCards = (category) => {
+    switch (category) {
+      case 'people':
+        this.fetchPeople(category);
+        break;
+      case 'planets':
+        console.log('planets');
+        break;
+      default:
+        console.log('vehicles');
+    }
 
+    // this.setState({[category]: ['s']});
   };
 
   async componentDidMount() {

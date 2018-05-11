@@ -7,17 +7,17 @@ const Navigation = props => {
     <nav id="menu" className="fadein">
       <ul>
         <li><a onClick={() => {
-          props.selectCategory('People');
+          props.selectCategory('people');
         }}>People</a></li>
         <li><a onClick={() => {
-          props.selectCategory('Planets');
+          props.selectCategory('planets');
         }}>Planets</a></li>
         <li><a onClick={() => {
-          props.selectCategory('Vehicles');
+          props.selectCategory('vehicles');
         }}>Vehicles</a></li>
-        <li><a onClick={() => {
-          props.selectCategory('Favorites');
-        }}>Favorites</a></li>
+        {/*<li><a onClick={() => {*/}
+          {/*props.selectCategory('favorites');*/}
+        {/*}}>Favorites</a></li>*/}
       </ul>
     </nav>
   );
