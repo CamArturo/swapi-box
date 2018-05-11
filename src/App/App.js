@@ -4,14 +4,19 @@ import AudioPlayer from './Audio/AudioPlayer';
 import Scroller from './Components/Scroll/Scroller';
 import Header from './Components/StatelessComponents/Header/Header';
 import Navigation from './Components/StatelessComponents/Navigation/Navigation';
+// import {fetchPeopleData} from './APICalls';
 import {getRandomInt} from './helper';
+import CardContainer from "./Components/StatelessComponents/CardContainer";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: false,
-      filmsInfo: {}
+      loading: true,
+      filmsInfo: {},
+      people: [],
+      vehicles: [],
+      planets: []
     };
   }
 
@@ -30,9 +35,13 @@ class App extends Component {
   //   // this.setState({filmsInfo});
   // };
 
+  updateCards = (category) => {
+
+  };
+
   async componentDidMount() {
-    this.setState({loading:true});
-    const randomNum = getRandomInt(0, 6);
+    this.setState({loading: false});
+    const randomNum = getRandomInt(1, 7);
     const url = `https://swapi.co/api/films/${randomNum}`;
     const response = await fetch(url);
     const data = await response.json();
@@ -55,8 +64,10 @@ class App extends Component {
             filmsInfo={this.state.filmsInfo}
           />
         }
-        <Navigation/>
-        
+        <Navigation
+          selectCategory={this.updateCards}
+        />
+        <CardContainer/>
       </div>
     );
   }
