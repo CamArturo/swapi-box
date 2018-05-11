@@ -1,5 +1,7 @@
 nav {
-  position: absolute;
+  position: fixed;
+  overflow: hidden;
+  margin-bottom: 1rem;
   bottom: 0;
   height: 4rem;
   display: flex;
@@ -15,12 +17,17 @@ nav {
     list-style-type: none; }
     nav ul li {
       margin: 0 1rem;
-      float: left; }
+      float: left;
+      background-color: #2a2a57;
+      border-radius: 5px;
+      width: 150px;
+      text-align: center;
+      padding: 10px; }
       nav ul li a {
         text-decoration: none;
-        color: #2a2a57;
+        color: #fff;
         font-weight: 600;
-        font-size: 2rem; }
+        font-size: 1.5rem; }
 
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
