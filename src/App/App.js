@@ -31,26 +31,29 @@ class App extends Component {
       const responseHomeWorldUrl = person.homeworld;
       const responseHomeWorld = await fetch(responseHomeWorldUrl);
       const homeWorldData = await responseHomeWorld.json();
-      // const homeworld = person.homeworld;
+      const speciesUrl = person.species;
+      const responseSpecies = await fetch(speciesUrl);
+      const speciesData = await responseSpecies.json();
       return {
         name: name,
-        // species: person.species,
-        homeworld: homeWorldData.name
-        // population: person.homeworld,
+        species: speciesData.name,
+        homeworld: homeWorldData.name,
+        population: homeWorldData.population,
       };
     });
     return Promise.all(results);
   };
 
   fetchPeople = async (category) => {
-    console.log('fired');
+    console.log('fetch people fired');
     const url = `https://swapi.co/api/${category}/`;
     const response = await fetch(url);
     const characters = await response.json();
     const people = await this.fetchPerson(characters.results);
     this.setState({
+      people,
       data: people
-    })
+    });
   };
 
   // Name
@@ -72,6 +75,7 @@ class App extends Component {
     }
 
     // this.setState({[category]: ['s']});
+    // this.state.people &&
   };
 
   async componentDidMount() {
@@ -102,11 +106,7 @@ class App extends Component {
         <Navigation
           selectCategory={this.updateCards}
         />
-        <CardContainer
-          {
-            this.state.people &&
-          }
-        />
+        <CardContainer />
       </div>
     );
   }
