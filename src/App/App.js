@@ -14,18 +14,50 @@ class App extends Component {
     this.state = {
       loading: true,
       filmsInfo: {},
+      data: [],
       people: [],
       vehicles: [],
-      planets: []
+      planets: [],
+      favorite: []
     };
   }
 
+  // set the data to whatever data you choose.
+  // if you click favorites then set the favorites array to data.
+
+  fetchPerson = personArray => {
+    const results = personArray.map(async person => {
+      const name = person.name;
+      const responseHomeWorldUrl = person.homeworld;
+      const responseHomeWorld = await fetch(responseHomeWorldUrl);
+      const homeWorldData = await responseHomeWorld.json();
+      // const homeworld = person.homeworld;
+      return {
+        name: name,
+        // species: person.species,
+        homeworld: homeWorldData.name
+        // population: person.homeworld,
+      };
+    });
+    return Promise.all(results);
+  };
+
   fetchPeople = async (category) => {
+    console.log('fired');
     const url = `https://swapi.co/api/${category}/`;
     const response = await fetch(url);
-    const data = await response.json();
-    console.log(data)
+    const characters = await response.json();
+    const people = await this.fetchPerson(characters.results);
+    this.setState({
+      data: people
+    })
   };
+
+  // Name
+  // Homeworld
+  // Species
+  // Population of Homeworld
+  // A button to “Favorite” the person
 
   updateCards = (category) => {
     switch (category) {
@@ -70,7 +102,11 @@ class App extends Component {
         <Navigation
           selectCategory={this.updateCards}
         />
-        <CardContainer/>
+        <CardContainer
+          {
+            this.state.people &&
+          }
+        />
       </div>
     );
   }
