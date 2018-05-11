@@ -6,7 +6,7 @@ import Header from './Components/StatelessComponents/Header/Header';
 import Navigation from './Components/StatelessComponents/Navigation/Navigation';
 // import {fetchPeopleData} from './APICalls';
 import {getRandomInt} from './helper';
-import CardContainer from "./Components/StatelessComponents/CardContainer";
+import CardContainer from "./Components/StatelessComponents/CardContainer/CardContainer";
 
 class App extends Component {
   constructor(props) {
@@ -38,7 +38,7 @@ class App extends Component {
         name: name,
         species: speciesData.name,
         homeworld: homeWorldData.name,
-        population: homeWorldData.population,
+        population: homeWorldData.population
       };
     });
     return Promise.all(results);
@@ -52,7 +52,8 @@ class App extends Component {
     const people = await this.fetchPerson(characters.results);
     this.setState({
       people,
-      data: people
+      data: people,
+      loading: false
     });
   };
 
@@ -79,7 +80,6 @@ class App extends Component {
   };
 
   async componentDidMount() {
-    this.setState({loading: false});
     const randomNum = getRandomInt(1, 7);
     const url = `https://swapi.co/api/films/${randomNum}`;
     const response = await fetch(url);
@@ -96,17 +96,21 @@ class App extends Component {
     return (
       <div className="App">
         <AudioPlayer/>
-        <Header/>
+        <Header />
         {
           this.state.filmsInfo &&
+          this.state.loading &&
           <Scroller
             filmsInfo={this.state.filmsInfo}
           />
         }
+        <CardContainer
+          cards={this.state.data}
+        />
         <Navigation
           selectCategory={this.updateCards}
         />
-        <CardContainer />
+
       </div>
     );
   }

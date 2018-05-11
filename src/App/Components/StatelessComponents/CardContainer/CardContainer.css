@@ -1,0 +1,14 @@
+.card-container {
+  margin: 5rem 0 7rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: scroll; }
+
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+
+/*# sourceMappingURL=CardContainer.css.map */
