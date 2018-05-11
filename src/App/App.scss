@@ -343,10 +343,10 @@ template {
 /* Camilo's Styles
    ========================================================================== */
 
-
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -358,6 +358,18 @@ html {
 
 .App {
   height: 100vh;
+  background: url("./death-star-1920.jpg") no-repeat center center fixed;
+  //margin: 5rem 0 7rem;
+  //margin: -1rem 0 7rem;
+  margin: 0 0 7rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* Large Devices, Wide Screens */
@@ -374,7 +386,6 @@ html {
 @media only screen and (max-width: 768px) {
 
 }
-
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {

@@ -17,7 +17,7 @@
 .card-header {
   text-align: center;
   font-size: 1.2rem;
-  height: 100px;
+  height: 80px;
   margin: 0;
   padding: 0 .5rem 0 .5rem;
   letter-spacing: 1px;
@@ -28,11 +28,25 @@
 
 .card-body {
   width: 100%;
-  background-color: #2a2a57;
-  height: 100vh;
+  background-color: #fff;
+  text-align: center;
+  color: #2a2a57;
+  height: 270px;
   padding: 1rem;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px; }
+
+.favorite-container {
+  display: flex;
+  align-content: baseline;
+  justify-content: center; }
+  .favorite-container .favorite {
+    margin: 0 1rem;
+    background-color: #2a2a57;
+    color: #fff;
+    border-radius: 5px;
+    width: 90px;
+    padding: 10px; }
 
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */

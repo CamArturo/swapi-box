@@ -310,7 +310,17 @@ html {
   font-family: 'Raleway', sans-serif; }
 
 .App {
-  height: 100vh; }
+  height: 100vh;
+  background: url("./death-star-1920.jpg") no-repeat center center fixed;
+  margin: 0 0 7rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */

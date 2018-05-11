@@ -5,13 +5,10 @@ import PropTypes from 'prop-types';
 
 const Header = () => {
   return (
-    <div>
-      <header className="App-header">
-        {/*<h1 className="title-fadein">SWAPIbox</h1>*/}
-        <img src={logo} className="fadein logo" alt="SWAPIbox"/>
-      </header>
-      <hr/>
-    </div>
+    <header className="App-header">
+      {/*<h1 className="title-fadein">SWAPIbox</h1>*/}
+      <img src={logo} className="fadein logo" alt="SWAPIbox"/>
+    </header>
   );
 };
 
