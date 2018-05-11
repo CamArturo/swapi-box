@@ -1,14 +1,19 @@
 .App-header {
-  height: 89px;
-  margin: 2rem 0 2rem 0;
+  height: 129px;
+  //margin: 2rem 0 2rem 0;
+  //margin: 0 0 2rem 0;
+  margin: 0;
   width: 100%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
 
   img {
     max-width: 700px;
+    height: 89px;
   }
 }
 

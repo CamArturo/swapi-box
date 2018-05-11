@@ -3,17 +3,18 @@ import PropTypes from 'prop-types';
 import './Card.css';
 
 const Card = props => {
-  const name = props.name;
   return (
     <article className="card">
       <section className="card-header">
-        <h2>Luke Skywalker</h2>
+        <h2>{props.cardInfo.name}</h2>
       </section>
       <section className="card-body">
-        <p>Homeworld: {props.homeworld}</p>
-        <p>Species: {props.species}</p>
-        <p>Population: {props.population}</p>
-        <button className="favorite">favorite</button>
+        <p>Homeworld: {props.cardInfo.homeworld}</p>
+        <p>Species: {props.cardInfo.species}</p>
+        <p>Population: {props.cardInfo.population}</p>
+        <div className="favorite-container">
+          <button className="favorite">favorite</button>
+        </div>
       </section>
     </article>
   );
