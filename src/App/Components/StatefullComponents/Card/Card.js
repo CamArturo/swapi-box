@@ -13,7 +13,7 @@ const Card = props => {
         <h2>{props.cardInfo.name}</h2>
       </section>
       <section className="card-body">
-        <p>{second}: : {props.cardInfo[second]}</p>
+        <p>{second} : {props.cardInfo[second]}</p>
         <p>{third} : {props.cardInfo[third]}</p>
         <p>{fourth} : {props.cardInfo[fourth]}</p>
         <div className="favorite-container">

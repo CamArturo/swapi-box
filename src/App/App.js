@@ -24,8 +24,9 @@ class App extends Component {
     };
   }
 
-  // set the data to whatever data you choose.
-  // if you click favorites then set the favorites array to data.
+  //TODO if data is already loaded into state do not do another fetch call
+  //TODO if card is already found in favorites do not add to state.
+  //TODO do not allow favorite button to be clicked again or toggle off.
 
   // fetchResidents = async residentsUrl => {
   //   if (residentsUrl.length > 1) {
@@ -37,9 +38,15 @@ class App extends Component {
   // };
 
   updateFavorites = cardInfo => {
-    //   return ninjas.map(ninja => ({...ninja, status: statuses[ninja.belt]}))
     this.setState({
       favorites: [...this.state.favorites, cardInfo]
+    });
+  };
+
+  displayFavorites = () => {
+    this.setState({
+      currentCategory: 'favorites',
+      loading: false
     });
   };
 
@@ -170,10 +177,12 @@ class App extends Component {
           people={this.state.people}
           planets={this.state.planets}
           vehicles={this.state.vehicles}
+          favorites={this.state.favorites}
           updateFavorites={this.updateFavorites}
         />
         <Navigation
           selectCategory={this.updateCards}
+          displayFavorites={this.displayFavorites}
         />
       </div>
     );
