@@ -5,7 +5,7 @@ import Scroller from './Components/Scroll/Scroller';
 import Header from './Components/StatelessComponents/Header/Header';
 import Navigation from './Components/StatelessComponents/Navigation/Navigation';
 // import {fetchPeopleData} from './APICalls';
-import {getRandomInt} from './helper';
+import {getRandomInt, isAlreadyFavorite} from './helper';
 import CardContainer
   from "./Components/StatelessComponents/CardContainer/CardContainer";
 
@@ -24,24 +24,33 @@ class App extends Component {
     };
   }
 
-  //TODO if data is already loaded into state do not do another fetch call
-  //TODO if card is already found in favorites do not add to state.
-  //TODO do not allow favorite button to be clicked again or toggle off.
+  // TODO do not allow favorite button to be clicked again or toggle off.
+  // TODO Remove from favorites
+  // TODO add CSS class if favorite
 
-  // fetchResidents = async residentsUrl => {
-  //   if (residentsUrl.length > 1) {
-  //     console.log('more than 1')
-  //   } else {
-  //     const responseResidents = await fetch(residentsUrl);
-  //     return await responseResidents.json();
-  //   }
-  // };
-
-  updateFavorites = cardInfo => {
-    this.setState({
-      favorites: [...this.state.favorites, cardInfo]
-    });
-  };
+  updateFavorites = ((cardInfo, category) => {
+    const isFound = isAlreadyFavorite(this.state.favorites, cardInfo);
+    if (!isFound) {
+      cardInfo.favorite = true;
+      this.setState({
+        favorites: [...this.state.favorites, cardInfo]
+      });
+    } else {
+      let arrayData = this.state[`${category}`];
+      let modifiedArray = arrayData.map((object) => {
+        if (object.name === cardInfo.name) {
+          cardInfo.favorite = !cardInfo.favorite;
+        }
+        return object;
+      });
+      const filteredModifiedArray = modifiedArray.filter(item => {
+        return item.favorite === true;
+      });
+      this.setState({
+        favorites: filteredModifiedArray
+      });
+    }
+  });
 
   displayFavorites = () => {
     this.setState({
@@ -51,57 +60,100 @@ class App extends Component {
   };
 
   fetchPerson = people => {
-    const results = people.map(async person => {
-      const name = person.name;
-      const responseHomeWorldUrl = person.homeworld;
-      const responseHomeWorld = await fetch(responseHomeWorldUrl);
-      const homeWorldData = await responseHomeWorld.json();
-      const speciesUrl = person.species;
-      const responseSpecies = await fetch(speciesUrl);
-      const speciesData = await responseSpecies.json();
-      return {
-        name: name,
-        species: speciesData.name,
-        homeworld: homeWorldData.name,
-        population: homeWorldData.population
-      };
-    });
-    return Promise.all(results);
+    try {
+      const results = people.map(async person => {
+        const name = person.name;
+        const responseHomeWorldUrl = person.homeworld;
+        // make following 2 lines a function for testing
+        const responseHomeWorld = await fetch(responseHomeWorldUrl);
+        const homeWorldData = await responseHomeWorld.json();
+        const speciesUrl = person.species;
+        const responseSpecies = await fetch(speciesUrl);
+        const speciesData = await responseSpecies.json();
+        return {
+          name: name,
+          species: speciesData.name,
+          homeworld: homeWorldData.name,
+          population: homeWorldData.population,
+          favorite: false
+        };
+      });
+      return Promise.all(results);
+    } catch (error) {
+      this.setState({
+        errorStatus: 'Error adding Person'
+      });
+    }
   };
 
   fetchPlanets = planets => {
-    const results = planets.map(async planet => {
-      const name = planet.name;
-      const terrain = planet.terrain;
-      const population = planet.population;
-      const climate = planet.climate;
-      const residentsUrl = planet.residents;
-      // const residentsData = await this.fetchResidents(residentsUrl);
-      return {
-        name: name,
-        terrain: terrain,
-        population: population,
-        climate: climate
-        // residentsData: residentsData
-      };
-    });
-    return Promise.all(results);
+    try {
+      const results = planets.map(async planet => {
+        const name = planet.name;
+        const terrain = planet.terrain;
+        const population = planet.population;
+        const climate = planet.climate;
+        const residentsUrl = planet.residents;
+        const residentsData = await this.fetchResidents(residentsUrl);
+        const residentNames = residentsData.map(resident => {
+          return ' ' + resident.name;
+        });
+        const residentString = residentNames.toString();
+        return {
+          name: name,
+          terrain: terrain,
+          population: population,
+          climate: climate,
+          residents: residentString,
+          favorite: false
+        };
+      });
+      return Promise.all(results);
+    } catch (error) {
+      this.setState({
+        errorStatus: 'Error adding Planet'
+      });
+    }
+  };
+
+  fetchResidents = residentsUrl => {
+    try {
+      const results = residentsUrl.map(async residentUrl => {
+        if (residentUrl.length > 1) {
+          const responseResidents = await fetch(residentUrl);
+          return await responseResidents.json();
+        }
+        return results;
+      });
+      return Promise.all(results);
+    } catch (error) {
+      this.setState({
+        errorStatus: 'Error adding Planet'
+      });
+    }
   };
 
   fetchVehicles = vehicles => {
-    const results = vehicles.map(async vehicle => {
-      const name = vehicle.name;
-      const model = vehicle.model;
-      const vehicleClass = vehicle.vehicle_class;
-      const passengers = vehicle.passengers;
-      return {
-        name: name,
-        model: model,
-        vehicleClass: vehicleClass,
-        passengers: passengers
-      };
-    });
-    return Promise.all(results);
+    try {
+      const results = vehicles.map(async vehicle => {
+        const name = vehicle.name;
+        const model = vehicle.model;
+        const vehicleClass = vehicle.vehicle_class;
+        const passengers = vehicle.passengers;
+        return {
+          name: name,
+          model: model,
+          vehicleClass: vehicleClass,
+          passengers: passengers,
+          favorite: false
+        };
+      });
+      return Promise.all(results);
+    } catch (error) {
+      this.setState({
+        errorStatus: 'Error adding Vehicle'
+      });
+    }
   };
 
   fetchCategory = async (category) => {
@@ -116,7 +168,12 @@ class App extends Component {
   updateCards = async (category) => {
     switch (category) {
       case 'people':
-        const people = await this.fetchPerson(this.state.peopleUrls);
+        let people;
+        if (!this.state.people.length) {
+          people = await this.fetchPerson(this.state.peopleUrls);
+        } else {
+          people = this.state.people;
+        }
         this.setState({
           people,
           currentCategory: 'people',
@@ -124,7 +181,12 @@ class App extends Component {
         });
         break;
       case 'planets':
-        const planets = await this.fetchPlanets(this.state.planetsUrls);
+        let planets;
+        if (!this.state.planets.length) {
+          planets = await this.fetchPlanets(this.state.planetsUrls);
+        } else {
+          planets = this.state.planets;
+        }
         this.setState({
           planets,
           currentCategory: 'planets',
@@ -132,7 +194,12 @@ class App extends Component {
         });
         break;
       case 'vehicles':
-        const vehicles = await this.fetchVehicles(this.state.vehiclesUrls);
+        let vehicles;
+        if (!this.state.vehicles.length) {
+          vehicles = await this.fetchVehicles(this.state.vehiclesUrls);
+        } else {
+          vehicles = this.state.vehicles;
+        }
         this.setState({
           vehicles,
           currentCategory: 'vehicles',
