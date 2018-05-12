@@ -28,15 +28,6 @@ class App extends Component {
   //TODO if card is already found in favorites do not add to state.
   //TODO do not allow favorite button to be clicked again or toggle off.
 
-  // fetchResidents = async residentsUrl => {
-  //   if (residentsUrl.length > 1) {
-  //     console.log('more than 1')
-  //   } else {
-  //     const responseResidents = await fetch(residentsUrl);
-  //     return await responseResidents.json();
-  //   }
-  // };
-
   updateFavorites = cardInfo => {
     this.setState({
       favorites: [...this.state.favorites, cardInfo]
@@ -76,17 +67,48 @@ class App extends Component {
       const population = planet.population;
       const climate = planet.climate;
       const residentsUrl = planet.residents;
-      // const residentsData = await this.fetchResidents(residentsUrl);
+      const residentsData = await this.fetchResidents(residentsUrl);
+      const residentNames = residentsData.map(resident => {
+        return resident.name;
+      });
+      const residentString = residentNames.toString();
       return {
         name: name,
         terrain: terrain,
         population: population,
-        climate: climate
-        // residentsData: residentsData
+        climate: climate,
+        residents: residentString
       };
     });
     return Promise.all(results);
   };
+
+  fetchResidents = residentsUrl => {
+    const results = residentsUrl.map(async residentUrl => {
+      if (residentUrl.length > 1) {
+        const responseResidents = await fetch(residentUrl);
+        return await responseResidents.json();
+      }
+      return results;
+    });
+    return Promise.all(results);
+  };
+
+  // fetchMultiplePpl = promises => {
+  //
+  // };
+  // const results = residentsUrl.map(async residentUrl => {
+  // console.log(residentUrl)
+  //   const responseResidents = await fetch(residentsUrl);
+  //   return await responseResidents.json();
+  // return await responseResidents.json();
+  // if (residentsUrl.length > 1) {
+  //   const responseResidents = await fetch(residentsUrl);
+  //   return await responseResidents.json();
+  // } else {
+  //   const responseResidents = await fetch(residentsUrl);
+  //   return await responseResidents.json();
+  // }
 
   fetchVehicles = vehicles => {
     const results = vehicles.map(async vehicle => {

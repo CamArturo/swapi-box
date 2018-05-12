@@ -7,6 +7,7 @@ const Card = props => {
   const second = keys[1];
   const third = keys[2];
   const fourth = keys[3];
+  const fifth = keys[4];
   return (
     <article className="card">
       <section className="card-header">
@@ -16,6 +17,7 @@ const Card = props => {
         <p>{second} : {props.cardInfo[second]}</p>
         <p>{third} : {props.cardInfo[third]}</p>
         <p>{fourth} : {props.cardInfo[fourth]}</p>
+        <p>{props.cardInfo[fifth]}</p>
         <div className="favorite-container">
           <button className="favorite" onClick={() => {
             props.updateFavorites(props.cardInfo);

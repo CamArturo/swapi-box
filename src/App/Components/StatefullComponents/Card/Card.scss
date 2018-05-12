@@ -11,14 +11,14 @@
   border-radius: 8px;
   background-color: #2a2a57;
   color: #fff;
-  height: 350px;
+  height: 390px;
   width: 250px;
 }
 
 .card-header {
   text-align: center;
   font-size: 1.2rem;
-  height: 80px;
+  height: 120px;
   margin: 0;
   padding: 0 .5rem 0 .5rem;
   letter-spacing: 1px;
@@ -26,6 +26,7 @@
   align-items: center;
   h2 {
     margin: 0;
+    text-transform: capitalize;
   }
 }
 
@@ -34,12 +35,13 @@
   background-color: #fff;
   text-align: center;
   color: #2a2a57;
-  height: 270px;
+  height: 310px;
   padding: 1rem;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   p {
     min-height: 36px;
+    text-transform: capitalize;
   }
 }
 
