@@ -24,9 +24,8 @@ class App extends Component {
     };
   }
 
-  // TODO do not allow favorite button to be clicked again or toggle off.
-  // TODO Remove from favorites
   // TODO add CSS class if favorite
+  // TODO Add counter to favorites button
 
   updateFavorites = ((cardInfo, category) => {
     const isFound = isAlreadyFavorite(this.state.favorites, cardInfo);
@@ -66,6 +65,9 @@ class App extends Component {
         const responseHomeWorldUrl = person.homeworld;
         // make following 2 lines a function for testing
         const responseHomeWorld = await fetch(responseHomeWorldUrl);
+        // if (responseHomeWorld.status < 300) {
+        //
+        // }
         const homeWorldData = await responseHomeWorld.json();
         const speciesUrl = person.species;
         const responseSpecies = await fetch(speciesUrl);
