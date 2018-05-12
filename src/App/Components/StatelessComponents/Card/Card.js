@@ -30,7 +30,8 @@ const Card = ({ cardInfo, category, updateFavorites }) => {
 
 Card.propTypes = {
   updateFavorites: PropTypes.func.isRequired,
-  category: PropTypes.string.isRequired
+  category: PropTypes.string.isRequired,
+  cardInfo: PropTypes.object.isRequired
 };
 
 export default Card;
