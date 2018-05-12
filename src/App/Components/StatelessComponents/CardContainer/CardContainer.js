@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Card from "../../StatefullComponents/Card/Card";
+import Card from "../Card/Card";
 import './CardContainer.css';
 
 const CardContainer =
@@ -15,6 +15,7 @@ const CardContainer =
     } else {
       array = favorites;
     }
+
     // const selectedClass = array.includes(???selected) ? 'card selected' : 'card';
 
     const allCards = array.map((card, index) => {
@@ -22,6 +23,7 @@ const CardContainer =
         <Card
           // selectedClass={selectedClass}
           cardInfo={card}
+          category={category}
           updateFavorites={updateFavorites}
           key={`card${index}`}
         />

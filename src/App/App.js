@@ -24,19 +24,33 @@ class App extends Component {
     };
   }
 
-  // TODO if data is already loaded into state do not do another fetch call
   // TODO do not allow favorite button to be clicked again or toggle off.
   // TODO Remove from favorites
   // TODO add CSS class if favorite
 
-  updateFavorites = cardInfo => {
+  updateFavorites = ((cardInfo, category) => {
     const isFound = isAlreadyFavorite(this.state.favorites, cardInfo);
     if (!isFound) {
+      cardInfo.favorite = true;
       this.setState({
         favorites: [...this.state.favorites, cardInfo]
       });
+    } else {
+      let arrayData = this.state[`${category}`];
+      let modifiedArray = arrayData.map((object) => {
+        if (object.name === cardInfo.name) {
+          cardInfo.favorite = !cardInfo.favorite;
+        }
+        return object;
+      });
+      const filteredModifiedArray = modifiedArray.filter(item => {
+        return item.favorite === true;
+      });
+      this.setState({
+        favorites: filteredModifiedArray
+      });
     }
-  };
+  });
 
   displayFavorites = () => {
     this.setState({
