@@ -38,7 +38,11 @@
   padding: 1rem;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  p {
+    min-height: 36px;
+  }
 }
+
 .favorite-container {
   display: flex;
   align-content: baseline;
@@ -52,7 +56,6 @@
     padding: 10px;
   }
 }
-
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
@@ -68,7 +71,6 @@
 @media only screen and (max-width: 768px) {
 
 }
-
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {

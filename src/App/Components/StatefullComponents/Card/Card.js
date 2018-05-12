@@ -1,25 +1,33 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './Card.css';
 
 const Card = props => {
+  const keys = Object.keys(props.cardInfo);
+  const second = keys[1];
+  const third = keys[2];
+  const fourth = keys[3];
   return (
     <article className="card">
       <section className="card-header">
         <h2>{props.cardInfo.name}</h2>
       </section>
       <section className="card-body">
-        <p>Homeworld: {props.cardInfo.homeworld}</p>
-        <p>Species: {props.cardInfo.species}</p>
-        <p>Population: {props.cardInfo.population}</p>
+        <p>{second}: : {props.cardInfo[second]}</p>
+        <p>{third} : {props.cardInfo[third]}</p>
+        <p>{fourth} : {props.cardInfo[fourth]}</p>
         <div className="favorite-container">
-          <button className="favorite">favorite</button>
+          <button className="favorite" onClick={() => {
+            props.updateFavorites(props.cardInfo);
+          }}>favorite</button>
         </div>
       </section>
     </article>
   );
 };
 
-Card.propTypes = {};
+Card.propTypes = {
+  updateFavorites: PropTypes.func.isRequired
+};
 
 export default Card;

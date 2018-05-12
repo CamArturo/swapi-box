@@ -19,13 +19,29 @@ class App extends Component {
       people: [],
       vehicles: [],
       planets: [],
-      favorite: [],
+      favorites: [],
       currentCategory: ''
     };
   }
 
   // set the data to whatever data you choose.
   // if you click favorites then set the favorites array to data.
+
+  // fetchResidents = async residentsUrl => {
+  //   if (residentsUrl.length > 1) {
+  //     console.log('more than 1')
+  //   } else {
+  //     const responseResidents = await fetch(residentsUrl);
+  //     return await responseResidents.json();
+  //   }
+  // };
+
+  updateFavorites = cardInfo => {
+    //   return ninjas.map(ninja => ({...ninja, status: statuses[ninja.belt]}))
+    this.setState({
+      favorites: [...this.state.favorites, cardInfo]
+    });
+  };
 
   fetchPerson = people => {
     const results = people.map(async person => {
@@ -53,15 +69,29 @@ class App extends Component {
       const population = planet.population;
       const climate = planet.climate;
       const residentsUrl = planet.residents;
-      // const responseResidents = await fetch(residentsUrl);
-      // const residentsData = await responseResidents.json();
-
+      // const residentsData = await this.fetchResidents(residentsUrl);
       return {
         name: name,
         terrain: terrain,
         population: population,
         climate: climate
         // residentsData: residentsData
+      };
+    });
+    return Promise.all(results);
+  };
+
+  fetchVehicles = vehicles => {
+    const results = vehicles.map(async vehicle => {
+      const name = vehicle.name;
+      const model = vehicle.model;
+      const vehicleClass = vehicle.vehicle_class;
+      const passengers = vehicle.passengers;
+      return {
+        name: name,
+        model: model,
+        vehicleClass: vehicleClass,
+        passengers: passengers
       };
     });
     return Promise.all(results);
@@ -87,7 +117,6 @@ class App extends Component {
         });
         break;
       case 'planets':
-        console.log('planets called ');
         const planets = await this.fetchPlanets(this.state.planetsUrls);
         this.setState({
           planets,
@@ -96,9 +125,15 @@ class App extends Component {
         });
         break;
       case 'vehicles':
-        console.log('vehicles');
+        const vehicles = await this.fetchVehicles(this.state.vehiclesUrls);
+        this.setState({
+          vehicles,
+          currentCategory: 'vehicles',
+          loading: false
+        });
         break;
-      default: break;
+      default:
+        break;
     }
   };
 
@@ -115,7 +150,7 @@ class App extends Component {
     this.setState({filmsInfo});
     await this.fetchCategory('people');
     await this.fetchCategory('planets');
-    // await this.fetchCategory('vehicles');
+    await this.fetchCategory('vehicles');
   }
 
   render() {
@@ -135,6 +170,7 @@ class App extends Component {
           people={this.state.people}
           planets={this.state.planets}
           vehicles={this.state.vehicles}
+          updateFavorites={this.updateFavorites}
         />
         <Navigation
           selectCategory={this.updateCards}
