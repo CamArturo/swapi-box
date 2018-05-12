@@ -15,9 +15,12 @@ const CardContainer =
     } else {
       array = favorites;
     }
+    // const selectedClass = array.includes(???selected) ? 'card selected' : 'card';
+
     const allCards = array.map((card, index) => {
       return (
         <Card
+          // selectedClass={selectedClass}
           cardInfo={card}
           updateFavorites={updateFavorites}
           key={`card${index}`}
