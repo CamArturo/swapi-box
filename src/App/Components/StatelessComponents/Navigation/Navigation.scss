@@ -12,24 +12,20 @@ nav {
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    li {
-      margin: 0 1rem;
-      float: left;
-      background-color: #2a2a57;
-      border-radius: 5px;
-      width: 150px;
-      text-align: center;
-      padding: 10px;
-      a {
-        text-decoration: none;
-        color: #fff;
-        font-weight: 600;
-        font-size: 1.5rem;
-      }
+  button {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    background: #2a2a57;
+    padding: 7px 1rem;
+    margin: 1rem;
+    text-align: center;
+    font-weight: normal;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+      box-shadow: 0 5px 15px rgba(42, 42, 87, .9);
     }
   }
 }

@@ -19,7 +19,8 @@ class App extends Component {
       people: [],
       vehicles: [],
       planets: [],
-      favorite: []
+      favorite: [],
+      currentCategory: ''
     };
   }
 
@@ -45,31 +46,19 @@ class App extends Component {
     return Promise.all(results);
   };
 
-  // fetch people on scroll,
-  // fetch Category
-
-
   fetchCategory = async (category) => {
     const url = `https://swapi.co/api/${category}/`;
     const response = await fetch(url);
     const categoryUrls = await response.json();
-    // take fetchPerson out -
-    //const people = await this.fetchPerson(characters.results);
     this.setState({
       [`${category}Urls`]: categoryUrls.results
     });
   };
 
-  // Name
-  // Homeworld
-  // Species
-  // Population of Homeworld
-  // A button to “Favorite” the person
-
   updateCards = async (category) => {
     switch (category) {
       case 'people':
-        // rename FetchCategor
+        // https://swapi.co/api/people/results
         const people = await this.fetchPerson(this.state.peopleUrls);
         this.setState({
           // data: people,
@@ -80,12 +69,11 @@ class App extends Component {
       case 'planets':
         console.log('planets');
         break;
-      default:
+      case 'vehicles':
         console.log('vehicles');
+        break;
+      default: break;
     }
-
-    // this.setState({[category]: ['s']});
-    // this.state.people &&
   };
 
   async componentDidMount() {
@@ -100,8 +88,8 @@ class App extends Component {
     };
     this.setState({filmsInfo});
     await this.fetchCategory('people');
-    await this.fetchCategory('planets');
-    await this.fetchCategory('vehicles');
+    // await this.fetchCategory('planets');
+    // await this.fetchCategory('vehicles');
   }
 
   render() {
@@ -116,16 +104,15 @@ class App extends Component {
             filmsInfo={this.state.filmsInfo}
           />
         }
-        <CardContainer
-          category={this.state.currentCategory}
-          people={this.state.people}
-          planets={this.state.planets}
-          vehicles={this.state.vehicles}
-        />
+        {/*<CardContainer*/}
+          {/*category={this.state.currentCategory}*/}
+          {/*people={this.state.people}*/}
+          {/*planets={this.state.planets}*/}
+          {/*vehicles={this.state.vehicles}*/}
+        {/*/>*/}
         <Navigation
           selectCategory={this.updateCards}
         />
-
       </div>
     );
   }

@@ -316,7 +316,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  overflow: scroll;
+  overflow: hidden;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
