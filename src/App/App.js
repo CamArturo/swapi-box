@@ -63,6 +63,7 @@ class App extends Component {
         this.setState({
           // data: people,
           people,
+          currentCategory: 'people',
           loading: false
         });
         break;
@@ -104,12 +105,12 @@ class App extends Component {
             filmsInfo={this.state.filmsInfo}
           />
         }
-        {/*<CardContainer*/}
-          {/*category={this.state.currentCategory}*/}
-          {/*people={this.state.people}*/}
-          {/*planets={this.state.planets}*/}
-          {/*vehicles={this.state.vehicles}*/}
-        {/*/>*/}
+        <CardContainer
+          category={this.state.currentCategory}
+          people={this.state.people}
+          planets={this.state.planets}
+          vehicles={this.state.vehicles}
+        />
         <Navigation
           selectCategory={this.updateCards}
         />

@@ -3,7 +3,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  overflow: scroll;
+  //overflow: scroll;
+  overflow: hidden;
 }
 
 /* Large Devices, Wide Screens */

@@ -41,7 +41,7 @@
   align-content: baseline;
   justify-content: center; }
   .favorite-container .favorite {
-    margin: 0 1rem;
+    margin: 5rem 1rem 0;
     background-color: #2a2a57;
     color: #fff;
     border-radius: 5px;
