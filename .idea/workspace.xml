@@ -4,15 +4,8 @@
     <list default="true" id="400e2b15-83b1-4334-ad8c-fcbf46cbbed9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Audio/AudioPlayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Audio/AudioPlayer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/CardContainer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/CardContainer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/CardContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/CardContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/CardContainer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/CardContainer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Components/StatelessComponents/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/StatelessComponents/Header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/Components/StatelessComponents/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/StatelessComponents/Navigation/Navigation.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -32,8 +25,8 @@
           <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/App/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="595">
-                  <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
+                <state relative-caret-position="104">
+                  <caret line="28" column="72" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
                     <element signature="e#357#395#0" expanded="true" />
@@ -43,7 +36,7 @@
                     <element signature="e#2166#2176#0" />
                     <element signature="e#1587#1875#0" />
                     <element signature="n#!!block;n#componentDidMount#0;n#App#0" />
-                    <marker date="1526096295806" expanded="true" signature="313:356" ph="..." />
+                    <marker date="1526097756889" expanded="true" signature="313:356" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -56,8 +49,11 @@
           <file leaf-file-name="CardContainer.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/CardContainer.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="12" selection-start-column="12" selection-end-column="12" />
+                <state relative-caret-position="663">
+                  <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -65,10 +61,22 @@
           <file leaf-file-name="Card.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+                <state relative-caret-position="357">
+                  <caret line="21" column="12" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="21" selection-end-column="12" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Navigation.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/App/Components/StatelessComponents/Navigation/Navigation.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="408">
+                  <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -156,11 +164,11 @@
         <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/Navigation/Navigation.scss" />
         <option value="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.css" />
         <option value="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.scss" />
-        <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/Navigation/Navigation.js" />
         <option value="$PROJECT_DIR$/src/App/Audio/AudioPlayer.js" />
-        <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/CardContainer.js" />
         <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/Header/Header.js" />
         <option value="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.js" />
+        <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/Navigation/Navigation.js" />
+        <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/CardContainer.js" />
         <option value="$PROJECT_DIR$/src/App/App.js" />
       </list>
     </option>
@@ -354,14 +362,23 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67883000" />
+    <option name="totallyTimeSpent" value="69163000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="-115" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.12848867" />
-      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.12848867" />
+      <window_info anchor="bottom" id="TODO" order="10" weight="0.32935324" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32923076" />
@@ -527,7 +544,7 @@
             <element signature="e#2166#2176#0" />
             <element signature="e#1587#1875#0" />
             <element signature="n#!!block;n#componentDidMount#0;n#App#0" />
-            <marker date="1526096295806" expanded="true" signature="313:356" ph="..." />
+            <marker date="1526097756889" expanded="true" signature="313:356" ph="..." />
           </folding>
         </state>
       </provider>
@@ -545,7 +562,7 @@
             <element signature="e#2166#2176#0" />
             <element signature="e#1587#1875#0" />
             <element signature="n#!!block;n#componentDidMount#0;n#App#0" />
-            <marker date="1526096295806" expanded="true" signature="313:356" ph="..." />
+            <marker date="1526097756889" expanded="true" signature="313:356" ph="..." />
           </folding>
         </state>
       </provider>
@@ -711,7 +728,7 @@
         <state relative-caret-position="85">
           <caret line="5" column="21" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="21" />
           <folding>
-            <marker date="1526093053693" expanded="true" signature="18:40" ph="..." />
+            <marker date="1526096553457" expanded="true" signature="18:40" ph="..." />
           </folding>
         </state>
       </provider>
@@ -754,16 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Components/StatelessComponents/Navigation/Navigation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Audio/AudioPlayer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -781,17 +788,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Components/StatelessComponents/Navigation/Navigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/CardContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        <state relative-caret-position="663">
+          <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+        <state relative-caret-position="357">
+          <caret line="21" column="12" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="21" selection-end-column="12" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -800,8 +820,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
+        <state relative-caret-position="104">
+          <caret line="28" column="72" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <element signature="e#357#395#0" expanded="true" />
@@ -811,7 +831,7 @@
             <element signature="e#2166#2176#0" />
             <element signature="e#1587#1875#0" />
             <element signature="n#!!block;n#componentDidMount#0;n#App#0" />
-            <marker date="1526096295806" expanded="true" signature="313:356" ph="..." />
+            <marker date="1526097756889" expanded="true" signature="313:356" ph="..." />
           </folding>
         </state>
       </provider>

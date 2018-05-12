@@ -4,14 +4,16 @@ import Card from "../../StatefullComponents/Card/Card";
 import './CardContainer.css';
 
 const CardContainer =
-  ({category, people, planets, vehicles, updateFavorites}) => {
+  ({category, people, planets, vehicles, favorites, updateFavorites}) => {
     let array = [];
     if (category === 'people') {
       array = people;
     } else if (category === 'planets') {
       array = planets;
-    } else {
+    } else if (category === 'vehicles') {
       array = vehicles;
+    } else {
+      array = favorites;
     }
     const allCards = array.map((card, index) => {
       return (
@@ -35,6 +37,7 @@ CardContainer.propTypes = {
   people: PropTypes.array.isRequired,
   planets: PropTypes.array.isRequired,
   vehicles: PropTypes.array.isRequired,
+  favorites: PropTypes.array.isRequired,
   updateFavorites: PropTypes.func.isRequired
 };
 
