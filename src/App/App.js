@@ -5,7 +5,7 @@ import Scroller from './Components/Scroll/Scroller';
 import Header from './Components/StatelessComponents/Header/Header';
 import Navigation from './Components/StatelessComponents/Navigation/Navigation';
 // import {fetchPeopleData} from './APICalls';
-import {getRandomInt} from './helper';
+import {getRandomInt, isAlreadyFavorite} from './helper';
 import CardContainer
   from "./Components/StatelessComponents/CardContainer/CardContainer";
 
@@ -24,14 +24,17 @@ class App extends Component {
     };
   }
 
-  //TODO if data is already loaded into state do not do another fetch call
   //TODO if card is already found in favorites do not add to state.
   //TODO do not allow favorite button to be clicked again or toggle off.
+  //TODO Remove from favorites
 
   updateFavorites = cardInfo => {
-    this.setState({
-      favorites: [...this.state.favorites, cardInfo]
-    });
+    const isFound = isAlreadyFavorite(this.state.favorites, cardInfo);
+    if (!isFound) {
+      this.setState({
+        favorites: [...this.state.favorites, cardInfo]
+      });
+    }
   };
 
   displayFavorites = () => {
@@ -93,22 +96,6 @@ class App extends Component {
     });
     return Promise.all(results);
   };
-
-  // fetchMultiplePpl = promises => {
-  //
-  // };
-  // const results = residentsUrl.map(async residentUrl => {
-  // console.log(residentUrl)
-  //   const responseResidents = await fetch(residentsUrl);
-  //   return await responseResidents.json();
-  // return await responseResidents.json();
-  // if (residentsUrl.length > 1) {
-  //   const responseResidents = await fetch(residentsUrl);
-  //   return await responseResidents.json();
-  // } else {
-  //   const responseResidents = await fetch(residentsUrl);
-  //   return await responseResidents.json();
-  // }
 
   fetchVehicles = vehicles => {
     const results = vehicles.map(async vehicle => {

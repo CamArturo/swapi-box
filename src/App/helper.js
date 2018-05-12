@@ -4,3 +4,6 @@ export const getRandomInt = ((min, max) => {
   return Math.floor(Math.random() * (max - min)) + min;
 });
 
+export const isAlreadyFavorite = ((favorites, cardInfo) => {
+  return favorites.includes(cardInfo);
+});
