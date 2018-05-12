@@ -27,8 +27,8 @@ class App extends Component {
   // set the data to whatever data you choose.
   // if you click favorites then set the favorites array to data.
 
-  fetchPerson = personArray => {
-    const results = personArray.map(async person => {
+  fetchPerson = people => {
+    const results = people.map(async person => {
       const name = person.name;
       const responseHomeWorldUrl = person.homeworld;
       const responseHomeWorld = await fetch(responseHomeWorldUrl);
@@ -46,6 +46,27 @@ class App extends Component {
     return Promise.all(results);
   };
 
+  fetchPlanets = planets => {
+    const results = planets.map(async planet => {
+      const name = planet.name;
+      const terrain = planet.terrain;
+      const population = planet.population;
+      const climate = planet.climate;
+      const residentsUrl = planet.residents;
+      // const responseResidents = await fetch(residentsUrl);
+      // const residentsData = await responseResidents.json();
+
+      return {
+        name: name,
+        terrain: terrain,
+        population: population,
+        climate: climate
+        // residentsData: residentsData
+      };
+    });
+    return Promise.all(results);
+  };
+
   fetchCategory = async (category) => {
     const url = `https://swapi.co/api/${category}/`;
     const response = await fetch(url);
@@ -58,17 +79,21 @@ class App extends Component {
   updateCards = async (category) => {
     switch (category) {
       case 'people':
-        // https://swapi.co/api/people/results
         const people = await this.fetchPerson(this.state.peopleUrls);
         this.setState({
-          // data: people,
           people,
           currentCategory: 'people',
           loading: false
         });
         break;
       case 'planets':
-        console.log('planets');
+        console.log('planets called ');
+        const planets = await this.fetchPlanets(this.state.planetsUrls);
+        this.setState({
+          planets,
+          currentCategory: 'planets',
+          loading: false
+        });
         break;
       case 'vehicles':
         console.log('vehicles');
@@ -89,7 +114,7 @@ class App extends Component {
     };
     this.setState({filmsInfo});
     await this.fetchCategory('people');
-    // await this.fetchCategory('planets');
+    await this.fetchCategory('planets');
     // await this.fetchCategory('vehicles');
   }
 
