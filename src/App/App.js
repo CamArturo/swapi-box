@@ -4,7 +4,7 @@ import AudioPlayer from './Audio/AudioPlayer';
 import Scroller from './Components/Scroll/Scroller';
 import Header from './Components/StatelessComponents/Header/Header';
 import Navigation from './Components/StatelessComponents/Navigation/Navigation';
-// import {fetchPeopleData} from './APICalls';
+import fetchVehicles from './APICalls';
 import {getRandomInt, isAlreadyFavorite} from './helper';
 import CardContainer
   from "./Components/StatelessComponents/CardContainer/CardContainer";
@@ -135,36 +135,42 @@ class App extends Component {
     }
   };
 
-  fetchVehicles = vehicles => {
-    try {
-      const results = vehicles.map(async vehicle => {
-        const name = vehicle.name;
-        const model = vehicle.model;
-        const vehicleClass = vehicle.vehicle_class;
-        const passengers = vehicle.passengers;
-        return {
-          name: name,
-          model: model,
-          vehicleClass: vehicleClass,
-          passengers: passengers,
-          favorite: false
-        };
-      });
-      return Promise.all(results);
-    } catch (error) {
-      this.setState({
-        errorStatus: 'Error adding Vehicle'
-      });
-    }
-  };
+  // fetchVehicles = vehicles => {
+  //   try {
+  //     const results = vehicles.map(async vehicle => {
+  //       const name = vehicle.name;
+  //       const model = vehicle.model;
+  //       const vehicleClass = vehicle.vehicle_class;
+  //       const passengers = vehicle.passengers;
+  //       return {
+  //         name: name,
+  //         model: model,
+  //         vehicleClass: vehicleClass,
+  //         passengers: passengers,
+  //         favorite: false
+  //       };
+  //     });
+  //     return Promise.all(results);
+  //   } catch (error) {
+  //     this.setState({
+  //       errorStatus: 'Error adding Vehicle'
+  //     });
+  //   }
+  // };
 
   fetchCategory = async (category) => {
-    const url = `https://swapi.co/api/${category}/`;
-    const response = await fetch(url);
-    const categoryUrls = await response.json();
-    this.setState({
-      [`${category}Urls`]: categoryUrls.results
-    });
+    try {
+      const url = `https://swapi.co/api/${category}/`;
+      const response = await fetch(url);
+      const categoryUrls = await response.json();
+      this.setState({
+        [`${category}Urls`]: categoryUrls.results
+      });
+    } catch (error) {
+      this.setState({
+        errorStatus: 'Error adding Category'
+      });
+    }
   };
 
   updateCards = async (category) => {
@@ -198,7 +204,7 @@ class App extends Component {
       case 'vehicles':
         let vehicles;
         if (!this.state.vehicles.length) {
-          vehicles = await this.fetchVehicles(this.state.vehiclesUrls);
+          vehicles = await fetchVehicles(this.state.vehiclesUrls);
         } else {
           vehicles = this.state.vehicles;
         }
