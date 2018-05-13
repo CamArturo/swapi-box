@@ -24,9 +24,6 @@ class App extends Component {
     };
   }
 
-  // TODO add CSS class if favorite
-  // TODO Add counter to favorites button
-
   updateFavorites = ((cardInfo, category) => {
     const isFound = isAlreadyFavorite(this.state.favorites, cardInfo);
     if (!isFound) {
@@ -256,6 +253,7 @@ class App extends Component {
           updateFavorites={this.updateFavorites}
         />
         <Navigation
+          currentCategory={this.state.currentCategory}
           selectCategory={this.updateCards}
           displayFavorites={this.displayFavorites}
           favorites={this.state.favorites.length}

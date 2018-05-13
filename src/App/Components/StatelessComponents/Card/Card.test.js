@@ -28,12 +28,16 @@ describe('Card test', () => {
 
     expect(wrapper).toMatchSnapshot();
   });
+  it('should call the updateFavorites prop when clicked', () => {
+    const wrapper = shallow(<Card
+      selectedClass={selectedClass}
+      cardInfo={card}
+      category={category}
+      updateFavorites={updateFavorites}
+    />);
 
-// test methods that are in render or lifecycle methods they are going to fire.
-  // fetch is called with params
-  // any function that act upon response of the fetch
-  // handle errors handle correctly
+    wrapper.find('.favorite').simulate('click');
 
-  // a did you write
-  // b is it important
+    expect(updateFavorites).toHaveBeenCalled();
+  });
 });

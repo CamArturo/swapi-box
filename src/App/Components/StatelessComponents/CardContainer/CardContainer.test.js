@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import CardContainer from "./CardContainer";
 
 describe('CardContainer test', () => {
@@ -93,4 +93,18 @@ describe('CardContainer test', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should assign array based on category passed in', () => {
+
+    // const app = mount(<CardContainer category={category}
+    //                                  people={people}
+    //                                  planets={planets}
+    //                                  vehicles={vehicles}
+    //                                  favorites={favorites}
+    //                                  updateFavorites={updateFavorites}
+    // />);
+    //
+    // expect(app.find(Card).prop(category)).toBe('people');
+
+    // expect(wrapper.find(card).prop).toBe(people);
+  });
 });

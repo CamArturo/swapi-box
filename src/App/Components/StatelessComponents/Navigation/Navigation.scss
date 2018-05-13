@@ -32,6 +32,11 @@ nav {
   }
 }
 
+.active {
+  background-color: #ffd100;
+  color: #2a2a57;
+}
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
 

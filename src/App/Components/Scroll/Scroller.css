@@ -45,10 +45,9 @@ body {
   100% {
     top: -6000px;
     transform: rotateX(12deg) translateZ(-2500px); } }
+
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
 /* Small Devices, Tablets */
 /* Extra Small Devices, Phones */
 /* Custom, iPhone Retina */
-
-/*# sourceMappingURL=Scroller.css.map */
