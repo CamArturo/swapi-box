@@ -18,7 +18,7 @@ describe('Card test', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-// render or lifecycle methods they are going to fire.
+// test methods that are in render or lifecycle methods they are going to fire.
   // fetch is called with params
   // any function that act upon response of the fetch
   // handle errors handle correctly

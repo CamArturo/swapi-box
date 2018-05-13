@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="400e2b15-83b1-4334-ad8c-fcbf46cbbed9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/App/Audio/AudioPlayer.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/APICalls.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/APICalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/APICalls.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Audio/AudioPlayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Audio/AudioPlayer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Components/StatelessComponents/Card/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/StatelessComponents/Card/Card.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/Components/StatelessComponents/Card/Card.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/StatelessComponents/Card/Card.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/CardContainer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/CardContainer.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Components/StatelessComponents/Header/Header.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/StatelessComponents/Header/Header.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Components/StatelessComponents/Navigation/Navigation.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Components/StatelessComponents/Navigation/Navigation.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/__snapshots__/App.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/__snapshots__/App.test.js.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/test.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,58 +22,55 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="App.test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/App.test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Card.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/Components/StatelessComponents/Card/Card.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="67" column="8" lean-forward="true" selection-start-line="67" selection-start-column="11" selection-end-line="69" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#357#414#0" expanded="true" />
-                <marker date="1526168932768" expanded="true" signature="313:356" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AudioPlayer.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/App/Audio/AudioPlayer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="34" selection-start-line="8" selection-end-line="9" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.40536723">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="Card.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/App/Components/StatelessComponents/Card/Card.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="153">
+                  <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/App/App.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="724">
+                  <caret line="170" column="43" lean-forward="true" selection-start-line="170" selection-start-column="22" selection-end-line="170" selection-end-column="43" />
+                  <folding>
+                    <element signature="e#0#39#0" expanded="true" />
+                    <element signature="e#3981#4013#0" />
+                    <marker date="1526172820899" expanded="true" signature="310:349" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="App.test.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/App/App.test.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="578">
+                  <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                    <element signature="e#170#296#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -106,6 +101,9 @@
       <find>fetchVehicles</find>
       <find>console</find>
       <find>$</find>
+      <find>APICal</find>
+      <find>fetchCategory</find>
+      <find>category</find>
     </findStrings>
     <replaceStrings>
       <replace>card</replace>
@@ -121,7 +119,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/App/Components/Navigation/Navigation.test.js" />
         <option value="$PROJECT_DIR$/src/App/Components/Header/Header.test.js" />
         <option value="$PROJECT_DIR$/src/App/Components/Header/Header.js" />
         <option value="$PROJECT_DIR$/src/App/Components/Header/Header.scss" />
@@ -143,7 +140,6 @@
         <option value="$PROJECT_DIR$/src/App/Components/Scroll/scroll.scss" />
         <option value="$PROJECT_DIR$/src/App/Components/Scroll/Scroll.js" />
         <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/index.js" />
-        <option value="$PROJECT_DIR$/src/App/APICalls.js" />
         <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/Header/Header.scss" />
         <option value="$PROJECT_DIR$/src/App/Components/Scroll/Scroller.scss" />
         <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/CardContainer.scss" />
@@ -161,7 +157,6 @@
         <option value="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.js" />
         <option value="$PROJECT_DIR$/src/App/Components/StatefullComponents/Card/Card.test.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/App/App.test.js" />
         <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/Navigation/Navigation.js" />
         <option value="$PROJECT_DIR$/src/App/Audio/AudioPlayer.test.js" />
         <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/Navigation/Navigation.test.js" />
@@ -169,9 +164,12 @@
         <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/Header/Header.js" />
         <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/CardContainer/CardContainer.test.js" />
         <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/Card/Card.js" />
-        <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/Card/Card.test.js" />
-        <option value="$PROJECT_DIR$/src/App/App.js" />
         <option value="$PROJECT_DIR$/src/App/Audio/AudioPlayer.js" />
+        <option value="$PROJECT_DIR$/src/App/Components/StatelessComponents/Card/Card.test.js" />
+        <option value="$PROJECT_DIR$/src/App/APICalls.js" />
+        <option value="$PROJECT_DIR$/src/App/APICalls.test.js" />
+        <option value="$PROJECT_DIR$/src/App/App.js" />
+        <option value="$PROJECT_DIR$/src/App/App.test.js" />
       </list>
     </option>
   </component>
@@ -226,13 +224,6 @@
               <item name="swapi-box" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="App" type="462c0819:PsiDirectoryNode" />
-              <item name="Audio" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swapi-box" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swapi-box" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="App" type="462c0819:PsiDirectoryNode" />
               <item name="Components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -251,42 +242,6 @@
               <item name="Components" type="462c0819:PsiDirectoryNode" />
               <item name="StatelessComponents" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="swapi-box" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swapi-box" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="App" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="StatelessComponents" type="462c0819:PsiDirectoryNode" />
-              <item name="Card" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swapi-box" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swapi-box" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="App" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="StatelessComponents" type="462c0819:PsiDirectoryNode" />
-              <item name="CardContainer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swapi-box" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swapi-box" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="App" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="StatelessComponents" type="462c0819:PsiDirectoryNode" />
-              <item name="Header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swapi-box" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swapi-box" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="App" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="StatelessComponents" type="462c0819:PsiDirectoryNode" />
-              <item name="Navigation" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -299,6 +254,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -327,10 +283,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Jest.App test">
+    <configuration name="App test" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/App/App.test.js" />
+      <test-names>
+        <test-name value="App test" />
+      </test-names>
+    </configuration>
     <configuration name="Card.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/App/Components/StatelessComponents/Card/Card.js" working-dir="$PROJECT_DIR$/src/App/Components/StatelessComponents/Card" />
+    <list>
+      <item itemvalue="Node.js.Card.js" />
+      <item itemvalue="Jest.App test" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.App test" />
         <item itemvalue="Node.js.Card.js" />
       </list>
     </recent_temporary>
@@ -351,8 +323,13 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="App_test - 2018.05.12 at 18h 34m 31s.xml">
+      <configuration name="App test" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91753000" />
+    <option name="totallyTimeSpent" value="96301000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -398,26 +375,6 @@
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Favorites" order="1" side_tool="true" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info id="npm" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.14767933" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.32923076" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32923076" />
-      <window_info id="Favorites" order="1" side_tool="true" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -431,13 +388,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/App/App.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="346" column="6" lean-forward="true" selection-start-line="346" selection-start-column="6" selection-end-line="346" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Components/Scroll/Scroller.test.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -482,8 +432,8 @@
           <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#357#414#0" expanded="true" />
-            <marker date="1526168932768" expanded="true" signature="313:356" ph="..." />
+            <element signature="e#3981#4013#0" />
+            <marker date="1526172820899" expanded="true" signature="310:349" ph="..." />
           </folding>
         </state>
       </provider>
@@ -494,8 +444,8 @@
           <caret line="3" column="48" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="48" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#357#414#0" expanded="true" />
-            <marker date="1526168932768" expanded="true" signature="313:356" ph="..." />
+            <element signature="e#3981#4013#0" />
+            <marker date="1526172820899" expanded="true" signature="310:349" ph="..." />
           </folding>
         </state>
       </provider>
@@ -550,13 +500,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -650,13 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/APICalls.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/helper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -711,16 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Components/Scroll/Scroller.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Components/StatelessComponents/Navigation/Navigation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -751,30 +677,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Components/StatelessComponents/Card/Card.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Components/StatelessComponents/Header/Header.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="3" selection-end-line="13" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/App.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -801,34 +707,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Audio/AudioPlayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Components/StatelessComponents/Card/Card.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        <state relative-caret-position="170">
+          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/APICalls.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="18" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Components/StatelessComponents/Card/Card.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/APICalls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Components/Scroll/Scroller.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="67" column="8" lean-forward="true" selection-start-line="67" selection-start-column="11" selection-end-line="69" selection-end-column="12" />
+        <state relative-caret-position="724">
+          <caret line="170" column="43" lean-forward="true" selection-start-line="170" selection-start-column="22" selection-end-line="170" selection-end-column="43" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#357#414#0" expanded="true" />
-            <marker date="1526168932768" expanded="true" signature="313:356" ph="..." />
+            <element signature="e#3981#4013#0" />
+            <marker date="1526172820899" expanded="true" signature="310:349" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Audio/AudioPlayer.js">
+    <entry file="file://$PROJECT_DIR$/src/App/App.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="34" selection-start-line="8" selection-end-line="9" />
+        <state relative-caret-position="578">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#170#296#0" />
           </folding>
         </state>
       </provider>
