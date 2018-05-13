@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   margin: 20px;
-  padding: 0;
+  padding: 4px;
   -webkit-box-shadow: 4px 4px 5px 0 rgba(10, 10, 10, 0.65);
   -moz-box-shadow: 4px 4px 5px 0 rgba(10, 10, 10, 0.65);
   box-shadow: 4px 4px 5px 0 rgba(10, 10, 10, 0.65);
@@ -13,6 +13,9 @@
   color: #fff;
   height: 390px;
   width: 250px;
+  &.selected {
+    border: 4px solid #FFD100;
+  }
   .card-header {
     text-align: center;
     font-size: 1.2rem;
@@ -34,29 +37,38 @@
     color: #2a2a57;
     height: 310px;
     padding: 1rem;
+    position: relative;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    .last {
+      height: 56px;
+      overflow: hidden;
+    }
     p {
-      min-height: 36px;
       text-transform: capitalize;
     }
   }
-  .selected {
-    border: 4px solid #FFD100;
-  }
+}
+
+.card.selected {
+  padding: 0;
 }
 
 .favorite-container {
-  display: flex;
-  align-content: baseline;
-  justify-content: center;
+  position: absolute;
+  top: calc(100% - 68px);
+  width: calc(100% - 2rem);
   .favorite {
     margin: 0 1rem;
     background-color: #2a2a57;
     color: #fff;
-    border-radius: 5px;
+    //border-radius: 5px;
     width: 90px;
     padding: 10px;
+    &:hover {
+      background-color: #414141;
+      border: 1px solid #fff;
+    }
   }
 }
 
