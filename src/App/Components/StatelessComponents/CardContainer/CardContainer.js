@@ -16,12 +16,12 @@ const CardContainer =
       array = favorites;
     }
 
-    // const selectedClass = array.includes(???selected) ? 'card selected' : 'card';
 
     const allCards = array.map((card, index) => {
+      let selectedClass = card.favorite === true ? 'card selected' : 'card';
       return (
         <Card
-          // selectedClass={selectedClass}
+          selectedClass={selectedClass}
           cardInfo={card}
           category={category}
           updateFavorites={updateFavorites}

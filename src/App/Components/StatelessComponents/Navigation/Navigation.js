@@ -16,14 +16,15 @@ const Navigation = props => {
       }}>Vehicles</button>
       <button onClick={() => {
         props.displayFavorites();
-      }}>Favorites</button>
+      }}>Favorites {props.favorites}</button>
     </nav>
   );
 };
 
 Navigation.propTypes = {
   selectCategory: PropTypes.func.isRequired,
-  displayFavorites: PropTypes.func.isRequired
+  displayFavorites: PropTypes.func.isRequired,
+  favorites: PropTypes.number.isRequired
 };
 
 export default Navigation;

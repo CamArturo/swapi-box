@@ -3,10 +3,10 @@ nav {
   position: fixed;
   overflow: hidden;
   bottom: 0;
-  height: 4rem;
+  height: 5rem;
   display: flex;
   justify-content: center;
-  width: 99%;
+  width: 100%;
   background: rgba(44, 44, 44, 0.85);
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -23,9 +23,11 @@ nav {
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
+    width: 120px;
     &:hover {
       color: rgba(255, 255, 255, 1);
-      box-shadow: 0 5px 15px rgba(42, 42, 87, .9);
+      //background-color: #414141;
+      box-shadow: 0 0 6px 3px rgba(255, 209, 0, 1);
     }
   }
 }

@@ -258,6 +258,7 @@ class App extends Component {
         <Navigation
           selectCategory={this.updateCards}
           displayFavorites={this.displayFavorites}
+          favorites={this.state.favorites.length}
         />
       </div>
     );

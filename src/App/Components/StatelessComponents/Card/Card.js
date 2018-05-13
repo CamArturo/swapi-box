@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Card.css';
 
-const Card = ({ cardInfo, category, updateFavorites }) => {
+const Card = ({cardInfo, category, updateFavorites, selectedClass}) => {
   const keys = Object.keys(cardInfo);
   const second = keys[1];
   const third = keys[2];
   const fourth = keys[3];
   const fifth = keys[4];
   return (
-    <article className="card">
+    <article className={selectedClass}>
       <section className="card-header">
         <h2>{cardInfo.name}</h2>
       </section>
@@ -17,11 +17,12 @@ const Card = ({ cardInfo, category, updateFavorites }) => {
         <p>{second} : {cardInfo[second]}</p>
         <p>{third} : {cardInfo[third]}</p>
         <p>{fourth} : {cardInfo[fourth]}</p>
-        <p>{cardInfo[fifth]}</p>
+        <p className="last">{cardInfo[fifth]}</p>
         <div className="favorite-container">
           <button className="favorite" onClick={() => {
             updateFavorites(cardInfo, category);
-          }}>favorite</button>
+          }}>favorite
+          </button>
         </div>
       </section>
     </article>
@@ -31,7 +32,8 @@ const Card = ({ cardInfo, category, updateFavorites }) => {
 Card.propTypes = {
   updateFavorites: PropTypes.func.isRequired,
   category: PropTypes.string.isRequired,
-  cardInfo: PropTypes.object.isRequired
+  cardInfo: PropTypes.object.isRequired,
+  selectedClass: PropTypes.string.isRequired
 };
 
 export default Card;
