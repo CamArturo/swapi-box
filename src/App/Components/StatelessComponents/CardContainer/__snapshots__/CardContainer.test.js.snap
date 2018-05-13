@@ -1,0 +1,264 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardContainer test should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    category="people"
+    favorites={
+        Array [
+            Object {
+              "favorite": false,
+              "model": "Digger Crawler",
+              "name": "Sand Crawler",
+              "passengers": "30",
+              "vehicleClass": "wheeled",
+            },
+            Object {
+              "favorite": false,
+              "model": "T-16 skyhopper",
+              "name": "T-16 skyhopper",
+              "passengers": "1",
+              "vehicleClass": "repulsorcraft",
+            },
+          ]
+    }
+    people={
+        Array [
+            Object {
+              "favorite": false,
+              "homeworld": "Tatooine",
+              "name": "Luke Skywalker",
+              "population": "200000",
+              "species": "Human",
+            },
+            Object {
+              "favorite": false,
+              "homeworld": "Tatooine",
+              "name": "C-3PO",
+              "population": "200000",
+              "species": "Droid",
+            },
+          ]
+    }
+    planets={
+        Array [
+            Object {
+              "climate": "temperate, tropical",
+              "name": "Yavin IV",
+              "population": "1000",
+              "residents": "",
+              "terrain": "jungle, rainforests",
+            },
+            Object {
+              "climate": "frozen",
+              "name": "Hoth",
+              "population": "unknown",
+              "residents": "",
+              "terrain": "tundra, ice caves, mountain ranges",
+            },
+          ]
+    }
+    updateFavorites={[Function]}
+    vehicles={
+        Array [
+            Object {
+              "favorite": false,
+              "model": "Digger Crawler",
+              "name": "Sand Crawler",
+              "passengers": "30",
+              "vehicleClass": "wheeled",
+            },
+            Object {
+              "favorite": false,
+              "model": "T-16 skyhopper",
+              "name": "T-16 skyhopper",
+              "passengers": "1",
+              "vehicleClass": "repulsorcraft",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          cardInfo={
+                    Object {
+                              "favorite": false,
+                              "homeworld": "Tatooine",
+                              "name": "Luke Skywalker",
+                              "population": "200000",
+                              "species": "Human",
+                            }
+          }
+          category="people"
+          selectedClass="card"
+          updateFavorites={[Function]}
+/>,
+        <Card
+          cardInfo={
+                    Object {
+                              "favorite": false,
+                              "homeworld": "Tatooine",
+                              "name": "C-3PO",
+                              "population": "200000",
+                              "species": "Droid",
+                            }
+          }
+          category="people"
+          selectedClass="card"
+          updateFavorites={[Function]}
+/>,
+      ],
+      "className": "card-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "card0",
+        "nodeType": "function",
+        "props": Object {
+          "cardInfo": Object {
+            "favorite": false,
+            "homeworld": "Tatooine",
+            "name": "Luke Skywalker",
+            "population": "200000",
+            "species": "Human",
+          },
+          "category": "people",
+          "selectedClass": "card",
+          "updateFavorites": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "card1",
+        "nodeType": "function",
+        "props": Object {
+          "cardInfo": Object {
+            "favorite": false,
+            "homeworld": "Tatooine",
+            "name": "C-3PO",
+            "population": "200000",
+            "species": "Droid",
+          },
+          "category": "people",
+          "selectedClass": "card",
+          "updateFavorites": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            cardInfo={
+                        Object {
+                                    "favorite": false,
+                                    "homeworld": "Tatooine",
+                                    "name": "Luke Skywalker",
+                                    "population": "200000",
+                                    "species": "Human",
+                                  }
+            }
+            category="people"
+            selectedClass="card"
+            updateFavorites={[Function]}
+/>,
+          <Card
+            cardInfo={
+                        Object {
+                                    "favorite": false,
+                                    "homeworld": "Tatooine",
+                                    "name": "C-3PO",
+                                    "population": "200000",
+                                    "species": "Droid",
+                                  }
+            }
+            category="people"
+            selectedClass="card"
+            updateFavorites={[Function]}
+/>,
+        ],
+        "className": "card-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "card0",
+          "nodeType": "function",
+          "props": Object {
+            "cardInfo": Object {
+              "favorite": false,
+              "homeworld": "Tatooine",
+              "name": "Luke Skywalker",
+              "population": "200000",
+              "species": "Human",
+            },
+            "category": "people",
+            "selectedClass": "card",
+            "updateFavorites": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "card1",
+          "nodeType": "function",
+          "props": Object {
+            "cardInfo": Object {
+              "favorite": false,
+              "homeworld": "Tatooine",
+              "name": "C-3PO",
+              "population": "200000",
+              "species": "Droid",
+            },
+            "category": "people",
+            "selectedClass": "card",
+            "updateFavorites": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

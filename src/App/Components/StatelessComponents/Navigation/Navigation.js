@@ -5,16 +5,16 @@ import PropTypes from 'prop-types';
 const Navigation = props => {
   return (
     <nav id="menu" className="fadein">
-      <button onClick={() => {
+      <button className="selectPeople" onClick={() => {
         props.selectCategory('people');
       }} >People</button>
-      <button onClick={() => {
+      <button className="selectPlanets" onClick={() => {
         props.selectCategory('planets');
       }}>Planets</button>
-      <button onClick={() => {
+      <button className="selectVehicles" onClick={() => {
         props.selectCategory('vehicles');
       }}>Vehicles</button>
-      <button onClick={() => {
+      <button className="selectFavorites" onClick={() => {
         props.displayFavorites();
       }}>Favorites {props.favorites}</button>
     </nav>

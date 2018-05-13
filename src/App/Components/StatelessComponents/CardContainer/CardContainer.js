@@ -16,7 +16,6 @@ const CardContainer =
       array = favorites;
     }
 
-
     const allCards = array.map((card, index) => {
       let selectedClass = card.favorite === true ? 'card selected' : 'card';
       return (
