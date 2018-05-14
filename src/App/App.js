@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
-import './App.css';
-import AudioPlayer from './Audio/AudioPlayer';
-import Scroller from './Components/Scroll/Scroller';
+import AudioPlayer from './Components/StatelessComponents/Audio/AudioPlayer';
+import Scroller from './Components/StatelessComponents/Scroll/Scroller';
 import Header from './Components/StatelessComponents/Header/Header';
 import Navigation from './Components/StatelessComponents/Navigation/Navigation';
+import CardContainer
+from "./Components/StatelessComponents/CardContainer/CardContainer";
+import Loading from "./Components/StatelessComponents/Loading/Loading";
 import fetchVehicles from './APICalls';
 import {getRandomInt, isAlreadyFavorite} from './helper';
-import CardContainer
-  from "./Components/StatelessComponents/CardContainer/CardContainer";
-import Loading from "./Components/StatelessComponents/Loading/Loading";
+import './App.css';
 
 class App extends Component {
   constructor(props) {

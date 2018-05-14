@@ -2,7 +2,6 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import App from './App';
 
-
 describe('App test', () => {
   let wrapper;
   let category;
@@ -94,6 +93,9 @@ describe('App test', () => {
       loading: true
     };
 
+    const expected = 'asdf'
     wrapper.instance().displayFavorites();
+    expect(wrapper.state('currentCategory')).toEqual('favorites');
   });
+
 });
