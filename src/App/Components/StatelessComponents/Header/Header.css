@@ -61,7 +61,10 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-  .App-header {
-    height: 83px; } }
+  .App-header img {
+    width: 90%;
+    margin: 1rem auto;
+    display: block;
+    height: auto; } }
 
 /* Custom, iPhone Retina */
