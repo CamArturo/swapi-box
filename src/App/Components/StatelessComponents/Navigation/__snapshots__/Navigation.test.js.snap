@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Navigation
+    currentCategory="planet"
     displayFavorites={[Function]}
     favorites={3}
     selectCategory={[Function]}
@@ -23,21 +24,25 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <button
+          className="selectPeople"
           onClick={[Function]}
 >
           People
 </button>,
         <button
+          className="selectPlanets"
           onClick={[Function]}
 >
           Planets
 </button>,
         <button
+          className="selectVehicles"
           onClick={[Function]}
 >
           Vehicles
 </button>,
         <button
+          className="selectFavorites"
           onClick={[Function]}
 >
           Favorites 
@@ -55,6 +60,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "People",
+          "className": "selectPeople",
           "onClick": [Function],
         },
         "ref": null,
@@ -67,6 +73,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Planets",
+          "className": "selectPlanets",
           "onClick": [Function],
         },
         "ref": null,
@@ -79,6 +86,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Vehicles",
+          "className": "selectVehicles",
           "onClick": [Function],
         },
         "ref": null,
@@ -94,6 +102,7 @@ ShallowWrapper {
             "Favorites ",
             3,
           ],
+          "className": "selectFavorites",
           "onClick": [Function],
         },
         "ref": null,
@@ -114,21 +123,25 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <button
+            className="selectPeople"
             onClick={[Function]}
 >
             People
 </button>,
           <button
+            className="selectPlanets"
             onClick={[Function]}
 >
             Planets
 </button>,
           <button
+            className="selectVehicles"
             onClick={[Function]}
 >
             Vehicles
 </button>,
           <button
+            className="selectFavorites"
             onClick={[Function]}
 >
             Favorites 
@@ -146,6 +159,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "People",
+            "className": "selectPeople",
             "onClick": [Function],
           },
           "ref": null,
@@ -158,6 +172,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Planets",
+            "className": "selectPlanets",
             "onClick": [Function],
           },
           "ref": null,
@@ -170,6 +185,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Vehicles",
+            "className": "selectVehicles",
             "onClick": [Function],
           },
           "ref": null,
@@ -185,6 +201,7 @@ ShallowWrapper {
               "Favorites ",
               3,
             ],
+            "className": "selectFavorites",
             "onClick": [Function],
           },
           "ref": null,

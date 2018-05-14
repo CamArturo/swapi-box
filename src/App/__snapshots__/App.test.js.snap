@@ -32,6 +32,7 @@ ShallowWrapper {
           vehicles={Array []}
 />,
         <Navigation
+          currentCategory=""
           displayFavorites={[Function]}
           favorites={0}
           selectCategory={[Function]}
@@ -91,6 +92,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "currentCategory": "",
           "displayFavorites": [Function],
           "favorites": 0,
           "selectCategory": [Function],
@@ -123,6 +125,7 @@ ShallowWrapper {
             vehicles={Array []}
 />,
           <Navigation
+            currentCategory=""
             displayFavorites={[Function]}
             favorites={0}
             selectCategory={[Function]}
@@ -182,6 +185,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "currentCategory": "",
             "displayFavorites": [Function],
             "favorites": 0,
             "selectCategory": [Function],

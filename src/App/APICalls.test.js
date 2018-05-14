@@ -19,7 +19,7 @@ describe('Card test', () => {
   ];
 
 
-  it('should call fetch with the correct args', () => {
+  it.skip('should call fetch with the correct args', () => {
 
   });
 });

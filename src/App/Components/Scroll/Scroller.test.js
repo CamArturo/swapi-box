@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import {shallow} from 'enzyme';
 import Scroller from './Scroller';
 
 describe('Scroller', () => {
@@ -7,7 +7,7 @@ describe('Scroller', () => {
     title: 'test-title',
     scroll: 'Some movie scroll',
     date: 'Movie-Release-Date'
-  }
+  };
   it('should match a snapshot', () => {
     const wrapper = shallow(
       <Scroller
