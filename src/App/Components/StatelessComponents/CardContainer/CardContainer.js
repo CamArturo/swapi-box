@@ -6,16 +6,6 @@ import {selectCards} from '../../../helper';
 
 const CardContainer =
   ({category, people, planets, vehicles, favorites, updateFavorites}) => {
-    // let selectedCards = [];
-    // if (category === 'people') {
-    //   selectedCards = people;
-    // } else if (category === 'planets') {
-    //   selectedCards = planets;
-    // } else if (category === 'vehicles') {
-    //   selectedCards = vehicles;
-    // } else {
-    //   selectedCards = favorites;
-    // }
     const selectedCards = selectCards(category, people, planets, vehicles, favorites);
     const allCards = selectedCards.map((card, index) => {
       let selectedClass = card.favorite === true ? 'card selected' : 'card';

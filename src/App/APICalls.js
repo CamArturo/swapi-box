@@ -1,4 +1,4 @@
-const fetchVehicles = vehicles => {
+export const fetchVehicles = vehicles => {
   try {
     const results = vehicles.map(vehicle => {
       const name = vehicle.name;
@@ -21,4 +21,18 @@ const fetchVehicles = vehicles => {
   }
 };
 
-export default fetchVehicles;
+
+export const fetchCategory = async (category) => {
+  try {
+    const url = `https://swapi.co/api/${category}/`;
+    const response = await fetch(url);
+    const categoryUrls = await response.json();
+    this.setState({
+      [`${category}Urls`]: categoryUrls.results
+    });
+  } catch (error) {
+    this.setState({
+      errorStatus: 'Error adding Category'
+    });
+  }
+};

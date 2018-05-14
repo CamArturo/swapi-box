@@ -3,6 +3,8 @@ import './Navigation.css';
 import PropTypes from 'prop-types';
 
 const Navigation = props => {
+
+  // TODO refactor selected category in navigation to have utilize state in navigation
   return (
     <nav id="menu" className="fadein">
       <button className={props.currentCategory === 'people' ? 'active' : 'selectPeople'} onClick={() => {

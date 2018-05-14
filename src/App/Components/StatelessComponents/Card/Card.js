@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import './Card.css';
 
 const Card = ({cardInfo, category, updateFavorites, selectedClass}) => {
+
+  // TODO refactor so that cardInfo is mapped over
   const keys = Object.keys(cardInfo);
   const second = keys[1];
   const third = keys[2];
