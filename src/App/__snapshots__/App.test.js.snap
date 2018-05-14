@@ -23,6 +23,7 @@ ShallowWrapper {
         <Scroller
           filmsInfo={Object {}}
 />,
+        false,
         <CardContainer
           category=""
           favorites={Array []}
@@ -71,6 +72,7 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      false,
       Object {
         "instance": null,
         "key": undefined,
@@ -116,6 +118,7 @@ ShallowWrapper {
           <Scroller
             filmsInfo={Object {}}
 />,
+          false,
           <CardContainer
             category=""
             favorites={Array []}
@@ -164,6 +167,7 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
+        false,
         Object {
           "instance": null,
           "key": undefined,
