@@ -34,5 +34,18 @@ nav {
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
 /* Small Devices, Tablets */
+@media only screen and (max-width: 630px) {
+  nav {
+    height: auto;
+    flex-wrap: wrap; }
+    nav button {
+      padding: 10px;
+      margin: 10px;
+      width: 100px; } }
+
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  nav button {
+    font-size: 12px; } }
+
 /* Custom, iPhone Retina */
