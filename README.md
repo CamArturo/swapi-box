@@ -32,9 +32,8 @@ A user can select between characters, vehicles and planets and also select a fav
 
 ![image](https://user-images.githubusercontent.com/8752377/40019338-2c66ef1a-577c-11e8-930c-5d0874b8b6d8.png)
 
-## *Whiteboarding* 
-
-
 ## *Mobile*
+
+![image](https://user-images.githubusercontent.com/8752377/40019474-91fb99d4-577c-11e8-9da7-ee4071159a18.png)
 
 ---
