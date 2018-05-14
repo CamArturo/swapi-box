@@ -3,7 +3,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 6rem; }
 
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */

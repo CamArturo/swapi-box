@@ -6,7 +6,7 @@ import Navigation from './Components/StatelessComponents/Navigation/Navigation';
 import CardContainer
 from "./Components/StatelessComponents/CardContainer/CardContainer";
 import Loading from "./Components/StatelessComponents/Loading/Loading";
-import fetchVehicles from './APICalls';
+import {fetchVehicles, fetchCategory} from './APICalls';
 import {getRandomInt, isAlreadyFavorite} from './helper';
 import './App.css';
 
@@ -62,8 +62,9 @@ class App extends Component {
       const results = people.map(async person => {
         const name = person.name;
         const responseHomeWorldUrl = person.homeworld;
-        // make following 2 lines a function for testing
+        // TODO make following 2 lines a function for testing
         const responseHomeWorld = await fetch(responseHomeWorldUrl);
+        // TODO 200 response
         // if (responseHomeWorld.status < 300) {
         //
         // }

@@ -16,9 +16,29 @@ ShallowWrapper {
     "instance": null,
     "key": undefined,
     "nodeType": "host",
-    "props": Object {},
+    "props": Object {
+      "children": <audio
+        autoPlay={true}
+        className="mainAudio"
+        loop={true}
+        src="23-The-Jedi-Steps-and-Finale.mp3"
+/>,
+    },
     "ref": null,
-    "rendered": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "autoPlay": true,
+        "className": "mainAudio",
+        "loop": true,
+        "src": "23-The-Jedi-Steps-and-Finale.mp3",
+      },
+      "ref": null,
+      "rendered": null,
+      "type": "audio",
+    },
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -26,9 +46,29 @@ ShallowWrapper {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
-      "props": Object {},
+      "props": Object {
+        "children": <audio
+          autoPlay={true}
+          className="mainAudio"
+          loop={true}
+          src="23-The-Jedi-Steps-and-Finale.mp3"
+/>,
+      },
       "ref": null,
-      "rendered": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "autoPlay": true,
+          "className": "mainAudio",
+          "loop": true,
+          "src": "23-The-Jedi-Steps-and-Finale.mp3",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "audio",
+      },
       "type": "div",
     },
   ],
