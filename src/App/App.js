@@ -8,12 +8,14 @@ import fetchVehicles from './APICalls';
 import {getRandomInt, isAlreadyFavorite} from './helper';
 import CardContainer
   from "./Components/StatelessComponents/CardContainer/CardContainer";
+import Loading from "./Components/StatelessComponents/Loading/Loading";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       loading: true,
+      scroller: true,
       filmsInfo: {},
       data: [],
       people: [],
@@ -132,29 +134,6 @@ class App extends Component {
     }
   };
 
-  // fetchVehicles = vehicles => {
-  //   try {
-  //     const results = vehicles.map(async vehicle => {
-  //       const name = vehicle.name;
-  //       const model = vehicle.model;
-  //       const vehicleClass = vehicle.vehicle_class;
-  //       const passengers = vehicle.passengers;
-  //       return {
-  //         name: name,
-  //         model: model,
-  //         vehicleClass: vehicleClass,
-  //         passengers: passengers,
-  //         favorite: false
-  //       };
-  //     });
-  //     return Promise.all(results);
-  //   } catch (error) {
-  //     this.setState({
-  //       errorStatus: 'Error adding Vehicle'
-  //     });
-  //   }
-  // };
-
   fetchCategory = async (category) => {
     try {
       const url = `https://swapi.co/api/${category}/`;
@@ -171,6 +150,9 @@ class App extends Component {
   };
 
   updateCards = async (category) => {
+    this.setState({
+      scroller: false
+    });
     switch (category) {
       case 'people':
         let people;
@@ -239,10 +221,15 @@ class App extends Component {
         <Header/>
         {
           this.state.filmsInfo &&
-          this.state.loading &&
+          this.state.scroller &&
           <Scroller
             filmsInfo={this.state.filmsInfo}
           />
+        }
+        {
+          !this.state.scroller &&
+          this.state.loading &&
+          <Loading/>
         }
         <CardContainer
           category={this.state.currentCategory}
