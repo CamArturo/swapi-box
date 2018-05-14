@@ -3,7 +3,7 @@ import {getRandomInt, isAlreadyFavorite, selectCards} from "./helper";
 
 describe('helper tests', () => {
   let wrapper;
-  const category = 'people';
+  const category = 'favorites';
   const favorites = [{
     name: "Luke Skywalker",
     species: "Human",
@@ -88,6 +88,6 @@ describe('helper tests', () => {
   });
 
   it('should assign array based on category passed in (people, planets, vehicles or favorites)', () => {
-    expect(selectCards(category, people, planets, vehicles, favorites)).toEqual(people);
+    expect(selectCards(category, people, planets, vehicles, favorites)).toEqual(favorites);
   });
 });

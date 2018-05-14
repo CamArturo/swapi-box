@@ -16,7 +16,6 @@ const CardContainer =
     // } else {
     //   selectedCards = favorites;
     // }
-
     const selectedCards = selectCards(category, people, planets, vehicles, favorites);
     const allCards = selectedCards.map((card, index) => {
       let selectedClass = card.favorite === true ? 'card selected' : 'card';

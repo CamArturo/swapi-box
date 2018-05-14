@@ -4,10 +4,11 @@ import Navigation from "./Navigation";
 
 
 describe('Navigation test', () => {
-  let selectCategory = jest.fn();
-  let displayFavorites = jest.fn();
-  let favorites = 3;
   let wrapper;
+  const selectCategory = jest.fn();
+  const displayFavorites = jest.fn();
+  const favorites = 3;
+  const currentCategory = 'planet';
 
   const vehicles = [
     {
@@ -31,6 +32,7 @@ describe('Navigation test', () => {
     wrapper = shallow(<Navigation selectCategory={selectCategory}
                                   displayFavorites={displayFavorites}
                                   favorites={favorites}
+                                  currentCategory={currentCategory}
     />);
   });
   it('should match the snapshot', () => {

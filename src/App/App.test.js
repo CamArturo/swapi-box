@@ -88,6 +88,12 @@ describe('App test', () => {
     expect(wrapper.state('errorStatus')).toEqual('Error adding Category');
   });
 
+  it('should setState of favorites when displayFavorites is called', () => {
+    let mockState = {
+      currentCategory: '',
+      loading: true
+    };
 
-  // promise resolves
+    wrapper.instance().displayFavorites();
+  });
 });

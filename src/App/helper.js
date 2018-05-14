@@ -8,8 +8,9 @@ export const isAlreadyFavorite = ((favorites, cardInfo) => {
   return favorites.includes(cardInfo);
 });
 
-export const selectCards = ((category, people, planets, vehicles, favorites) => {
-  let selectedCards = [];
+export const selectCards = ((category, people, planets, vehicles, favorites) =>
+{
+  let selectedCards;
   if (category === 'people') {
     selectedCards = people;
   } else if (category === 'planets') {
