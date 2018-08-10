@@ -1,7 +1,7 @@
 import React from 'react';
 import loading from '../../../assets/darth-vader.mp4';
 
-const Loading = props => {
+const Loading = () => {
   return (
     <video src={loading} width="100%" height="100%" autoPlay loop/>
   );

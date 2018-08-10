@@ -2,8 +2,8 @@ nav {
   position: fixed;
   overflow: hidden;
   bottom: 0;
-  height: 5rem;
   display: flex;
+  align-items: center;
   justify-content: center;
   width: 100%;
   background: rgba(44, 44, 44, 0.85);
@@ -22,7 +22,7 @@ nav {
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
-    width: 120px; }
+    min-height: 52px; }
     nav button:hover {
       color: white;
       box-shadow: 0 0 6px 3px #ffd100; }
@@ -33,6 +33,12 @@ nav {
 
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  nav {
+    flex-direction: column; }
+  .mainAudio {
+    margin-bottom: 1rem; } }
+
 /* Small Devices, Tablets */
 @media only screen and (max-width: 630px) {
   nav {
@@ -40,11 +46,14 @@ nav {
     flex-wrap: wrap; }
     nav button {
       padding: 10px;
-      margin: 10px;
-      width: 100px; } }
+      margin: 10px; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  nav .nav-button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
   nav button {
     font-size: 12px; } }
 

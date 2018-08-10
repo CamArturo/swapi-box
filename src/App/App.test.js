@@ -15,7 +15,7 @@ describe('App testing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  describe('fetchCategory testing', () => {
+  describe('Fetch Category testing', () => {
     beforeEach(() => {
       category = 'vehicles';
       mockData = {
@@ -63,7 +63,7 @@ describe('App testing', () => {
           "model": "Digger Crawler",
           "manufacturer": "Corellia Mining Corporation",
           "cost_in_credits": "150000",
-          "length": "36.8",
+          "length":"36.8",
           "max_atmosphering_speed": "30",
           "crew": "46",
           "passengers": "30",
@@ -106,6 +106,11 @@ describe('App testing', () => {
         passengers: "30",
         url: "https://swapi.co/api/vehicles/4/"
       };
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        json: () => Promise.resolve(mockData),
+        status: 200
+      }));
+      const renderedComponent = shallow()
     });
   });
 

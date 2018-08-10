@@ -32,5 +32,10 @@
       "src/**/*.{js,jsx}",
       "!src/index.js"
     ]
+  },
+  "headers": {
+    "/**": {
+      "Cache-Control": "no-store, no-cache"
+    }
   }
 }
