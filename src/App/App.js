@@ -1,14 +1,18 @@
 import React, {Component} from 'react';
-import AudioPlayer from './Components/StatelessComponents/Audio/AudioPlayer';
 import Scroller from './Components/StatelessComponents/Scroll/Scroller';
 import Header from './Components/StatelessComponents/Header/Header';
 import Navigation from './Components/StatelessComponents/Navigation/Navigation';
 import CardContainer
-from "./Components/StatelessComponents/CardContainer/CardContainer";
+  from "./Components/StatelessComponents/CardContainer/CardContainer";
 import Loading from "./Components/StatelessComponents/Loading/Loading";
 import {fetchVehicles, fetchCategory} from './APICalls';
 import {getRandomInt, isAlreadyFavorite} from './helper';
 import './App.css';
+
+
+//Components
+// APICalls
+// container with redux
 
 class App extends Component {
   constructor(props) {
@@ -140,6 +144,9 @@ class App extends Component {
       const url = `https://swapi.co/api/${category}/`;
       const response = await fetch(url);
       const categoryUrls = await response.json();
+
+      // const urls = fetchCategory(category)
+
       this.setState({
         [`${category}Urls`]: categoryUrls.results
       });
@@ -218,7 +225,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <AudioPlayer/>
         <Header/>
         {
           this.state.filmsInfo &&

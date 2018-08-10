@@ -3,8 +3,9 @@ nav {
   position: fixed;
   overflow: hidden;
   bottom: 0;
-  height: 5rem;
+  //height: 5rem;
   display: flex;
+  align-items: center;
   justify-content: center;
   width: 100%;
   background: rgba(44, 44, 44, 0.85);
@@ -24,6 +25,7 @@ nav {
     transition: all 0.2s ease-in-out;
     cursor: pointer;
     width: 120px;
+    min-height: 52px;
     &:hover {
       color: rgba(255, 255, 255, 1);
       //background-color: #414141;
@@ -44,7 +46,9 @@ nav {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
-
+  nav {
+    flex-direction: column;
+  }
 }
 
 /* Small Devices, Tablets */

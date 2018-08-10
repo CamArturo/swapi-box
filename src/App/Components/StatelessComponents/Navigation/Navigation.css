@@ -2,8 +2,8 @@ nav {
   position: fixed;
   overflow: hidden;
   bottom: 0;
-  height: 5rem;
   display: flex;
+  align-items: center;
   justify-content: center;
   width: 100%;
   background: rgba(44, 44, 44, 0.85);
@@ -22,7 +22,8 @@ nav {
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
-    width: 120px; }
+    width: 120px;
+    min-height: 52px; }
     nav button:hover {
       color: white;
       box-shadow: 0 0 6px 3px #ffd100; }
@@ -33,6 +34,10 @@ nav {
 
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  nav {
+    flex-direction: column; } }
+
 /* Small Devices, Tablets */
 @media only screen and (max-width: 630px) {
   nav {

@@ -311,7 +311,7 @@ html {
 
 .App {
   height: 100vh;
-  background: url("./death-star-1920.jpg") no-repeat center center fixed;
+  background: url("assets/death-star-1920.jpg") no-repeat center center fixed;
   margin: 0 0 7rem;
   display: flex;
   flex-wrap: wrap;
