@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import AudioPlayer from "../Audio/AudioPlayer";
 
 const Navigation = props => {
-
+  let favoritesText = "Favorites " + props.favorites;
   // TODO refactor selected category in navigation to have utilize state in navigation
   return (
     <nav id="menu" className="fadein">
@@ -31,7 +31,7 @@ const Navigation = props => {
           className={props.currentCategory === 'favorites' ? 'active' : 'selectFavorites'}
           onClick={() => {
             props.displayFavorites();
-          }}>Favorites {props.favorites}</button>
+          }}>{favoritesText}</button>
       </section>
       <AudioPlayer/>
     </nav>

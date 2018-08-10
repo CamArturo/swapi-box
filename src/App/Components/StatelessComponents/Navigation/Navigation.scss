@@ -24,7 +24,6 @@ nav {
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
-    width: 120px;
     min-height: 52px;
     &:hover {
       color: rgba(255, 255, 255, 1);
@@ -49,6 +48,9 @@ nav {
   nav {
     flex-direction: column;
   }
+  .mainAudio {
+    margin-bottom: 1rem;
+  }
 }
 
 /* Small Devices, Tablets */
@@ -63,7 +65,7 @@ nav {
     button {
       padding: 10px;
       margin: 10px;
-      width: 100px;
+      //width: 100px;
     }
   }
 }
@@ -71,6 +73,11 @@ nav {
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   nav {
+    .nav-button-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
     button {
       font-size: 12px;
     }

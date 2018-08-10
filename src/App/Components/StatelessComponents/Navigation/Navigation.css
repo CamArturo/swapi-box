@@ -22,7 +22,6 @@ nav {
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
-    width: 120px;
     min-height: 52px; }
     nav button:hover {
       color: white;
@@ -36,7 +35,9 @@ nav {
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
   nav {
-    flex-direction: column; } }
+    flex-direction: column; }
+  .mainAudio {
+    margin-bottom: 1rem; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 630px) {
@@ -45,11 +46,14 @@ nav {
     flex-wrap: wrap; }
     nav button {
       padding: 10px;
-      margin: 10px;
-      width: 100px; } }
+      margin: 10px; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  nav .nav-button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
   nav button {
     font-size: 12px; } }
 
