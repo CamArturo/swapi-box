@@ -5,7 +5,7 @@ import Navigation from './Components/StatelessComponents/Navigation/Navigation';
 import CardContainer
   from "./Components/StatelessComponents/CardContainer/CardContainer";
 import Loading from "./Components/StatelessComponents/Loading/Loading";
-import {fetchVehicles, fetchCategory} from './APICalls';
+import {fetchVehicles} from './APICalls';
 import {getRandomInt, isAlreadyFavorite} from './helper';
 import './App.css';
 
@@ -161,48 +161,44 @@ class App extends Component {
     this.setState({
       scroller: false
     });
-    switch (category) {
-      case 'people':
-        let people;
-        if (!this.state.people.length) {
-          people = await this.fetchPerson(this.state.peopleUrls);
-        } else {
-          people = this.state.people;
-        }
-        this.setState({
-          people,
-          currentCategory: 'people',
-          loading: false
-        });
-        break;
-      case 'planets':
-        let planets;
-        if (!this.state.planets.length) {
-          planets = await this.fetchPlanets(this.state.planetsUrls);
-        } else {
-          planets = this.state.planets;
-        }
-        this.setState({
-          planets,
-          currentCategory: 'planets',
-          loading: false
-        });
-        break;
-      case 'vehicles':
-        let vehicles;
-        if (!this.state.vehicles.length) {
-          vehicles = await fetchVehicles(this.state.vehiclesUrls);
-        } else {
-          vehicles = this.state.vehicles;
-        }
-        this.setState({
-          vehicles,
-          currentCategory: 'vehicles',
-          loading: false
-        });
-        break;
-      default:
-        break;
+    const categoryType = category;
+
+    if (categoryType === 'people') {
+      let people;
+      if (!this.state.people.length) {
+        people = await this.fetchPerson(this.state.peopleUrls);
+      } else {
+        people = this.state.people;
+      }
+      this.setState({
+        people,
+        currentCategory: 'people',
+        loading: false
+      });
+    } else if (categoryType === 'planets') {
+      let planets;
+      if (!this.state.planets.length) {
+        planets = await this.fetchPlanets(this.state.planetsUrls);
+      } else {
+        planets = this.state.planets;
+      }
+      this.setState({
+        planets,
+        currentCategory: 'planets',
+        loading: false
+      });
+    } else {
+      let vehicles;
+      if (!this.state.vehicles.length) {
+        vehicles = await fetchVehicles(this.state.vehiclesUrls);
+      } else {
+        vehicles = this.state.vehicles;
+      }
+      this.setState({
+        vehicles,
+        currentCategory: 'vehicles',
+        loading: false
+      });
     }
   };
 
