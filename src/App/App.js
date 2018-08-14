@@ -21,7 +21,6 @@ class App extends Component {
       loading: true,
       scroller: true,
       filmsInfo: {},
-      data: [],
       people: [],
       vehicles: [],
       planets: [],
@@ -157,30 +156,44 @@ class App extends Component {
     }
   };
 
-  updateCards = async (category) => {
+  isLoading = (categoryType) => {
+    if (this.state[`${categoryType}`].length) {
+      this.setState({
+        loading: false
+      });
+    } else {
+      this.setState({
+        loading: true
+      });
+    }
+  };
+
+  updateCards = async (categoryType) => {
     this.setState({
       scroller: false
     });
-    const categoryType = category;
+
+    this.isLoading(categoryType);
 
     if (categoryType === 'people') {
       let people;
-      if (!this.state.people.length) {
-        people = await this.fetchPerson(this.state.peopleUrls);
-      } else {
+      if (this.state.people.length) {
         people = this.state.people;
+      } else {
+        people = await this.fetchPerson(this.state.peopleUrls);
       }
       this.setState({
         people,
         currentCategory: 'people',
+        // loading: await this.isLoaded(categoryType)
         loading: false
       });
     } else if (categoryType === 'planets') {
       let planets;
-      if (!this.state.planets.length) {
-        planets = await this.fetchPlanets(this.state.planetsUrls);
-      } else {
+      if (this.state.planets.length) {
         planets = this.state.planets;
+      } else {
+        planets = await this.fetchPlanets(this.state.planetsUrls);
       }
       this.setState({
         planets,
@@ -189,10 +202,10 @@ class App extends Component {
       });
     } else {
       let vehicles;
-      if (!this.state.vehicles.length) {
-        vehicles = await fetchVehicles(this.state.vehiclesUrls);
-      } else {
+      if (this.state.vehicles.length) {
         vehicles = this.state.vehicles;
+      } else {
+        vehicles = await fetchVehicles(this.state.vehiclesUrls);
       }
       this.setState({
         vehicles,
@@ -206,11 +219,11 @@ class App extends Component {
     const randomNum = getRandomInt(1, 7);
     const url = `https://swapi.co/api/films/${randomNum}`;
     const response = await fetch(url);
-    const data = await response.json();
+    const filmData = await response.json();
     const filmsInfo = {
-      title: data.title,
-      date: data.release_date,
-      scroll: data.opening_crawl
+      title: filmData.title,
+      date: filmData.release_date,
+      scroll: filmData.opening_crawl
     };
     this.setState({filmsInfo});
     await this.fetchCategory('people');
